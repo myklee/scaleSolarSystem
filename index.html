@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Solar System to Scale</title>
+<link rel="stylesheet" href="fonts/stylesheet.css" />
+<link rel="stylesheet" href="styleVertical.css" />
+<link href='http://fonts.googleapis.com/css?family=Istok+Web&v2' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>-->
+<script type=="text/javascript" src=js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/customScripts.js"></script>
+<script type="text/javascript" src="js/animateEllipse.js"></script>
+
+
+
+</head>
+<body class="freeScroll">
+		  <div class="bgStars">
+					<div class="star1"></div>
+					<div class="star1"></div>
+					<div class="star1"></div>
+					<div class="star1"></div>
+		  </div>
+		  
+<div class="nav">
+<ul class="navList">
+	<li class="sun"><a id="goSun" href="#sunAnchor" class="planetLink"><div class="ic16"></div><span class="iau">Sun</span><span class="fullName"></span></span></a><div class="closePanel">+</div></li>
+	<li class="me"><a id="goMercury" href="#mercuryAnchor" class="planetLink"><div class="ic16"></div><span class="iau">Me<span class="fullName">rcury</span></span></a><div class="closePanel">+</div></li>
+	<li class="v"><a id="goVenus" href="#venusAnchor" class="planetLink"><div class="ic16"></div><span class="iau">V<span class="fullName">enus</span></span></a><div class="closePanel">+</div></li>
+	<li class="e"><a id="goEarth" href="#earthAnchor" class="planetLink"><div class="ic16"></div><span class="iau">E<span class="fullName">arth</span></span></a><div class="closePanel">+</div></li>
+	<li class="ma"><a id="goMars" href="#marsAnchor" class="planetLink"><div class="ic16"></div><span class="iau">Ma<span class="fullName">rs</span></span></a><div class="closePanel">+</div></li>
+	<li class="j"><a id="goJupiter" href="#jupiterAnchor" class="planetLink"><div class="ic16"></div><span class="iau">J<span class="fullName">upiter</span> </span></a><div class="closePanel">+</div></li>
+	<li class="s"><a id="goSaturn" href="#saturnAnchor" class="planetLink"><div class="ic16"></div><span class="iau">S<span class="fullName">aturn</span></span></a><div class="closePanel">+</div></li>
+	<li class="u"><a id="goUranus" href="#uranusAnchor" class="planetLink"><div class="ic16"></div><span class="iau">U<span class="fullName">ranus</span></span></a><div class="closePanel">+</div></li>
+	<li class="n"><a id="goNeptune" href="#neptuneAnchor" class="planetLink"><div class="ic16"></div><span class="iau">N<span class="fullName">eptune</span></span></a><div class="closePanel">+</div></li>
+</ul>
+<a id="goPluto" href="#plutoAnchor" class="planetLink"><div>pluto</div></a>
+</div>
+<!--<div class="testBed">
+		  <div id="testExpandOn" class="switch "></div>
+		  <div class="testBox">
+					<div class="testDefault"></div>
+					<div class="testExpand"></div>
+		  </div>
+</div>-->
+
+<div class="ruler">
+		  <div class="bgRuler">
+					<div class="rulerGrid"></div>
+					<small class="infoPanel infoSmall"><h2>4.5 Billion Kilometres</h2>This bar represents the average distance from The Sun to Neptune, or the approximate size of the inner solar system.
+					</small>
+		  </div>
+		  <div id="au">
+					<p>AU</p>
+					<small class="infoPanel infoSmall">An astronomical unit (abbreviated as AU, au, a.u., or ua.) is a unit of length equal to about 149,597,870.7-kilometre (92,955,807.3 mi) or approximately the mean Earth–Sun distance.
+					</small>
+		  </div>
+<div class="markerContainer"><div id="marker"><div class="markerHalf"></div></div></div>
+<div id="toggleCard">i</div>
+
+<div id="showPluto" class="switch"></div>
+<div id="freeScroll" class="switch"></div>
+<!--<div id="settings">
+		  <div class="button small">
+					<span>small</span>
+		  </div>
+		  <div class="button medium">
+					<span>med</span>
+		  </div>
+		  <div class="button small">
+					<span>large</span>
+		  </div>
+
+</div>-->
+
+
+</div>
+
+
+<div id="wrapper">
+
+    <div id="planetContainer" class="block">
+        <div id="sun" class="planet">
+        	<a id="sunAnchor" class="planetAnchor"></a>
+            <div class="card" id="sunCard">
+                <h1>the sun</h1>
+                <p>The Sun is the star at the center of the Solar System. It has a diameter of about 1,392,000 kilometers (865,000 mi), about 109 times that of Earth, and its mass (about 2 × 1030 kilograms, 330,000 times that of Earth) accounts for about 99.86% of the total mass of the Solar System.[10] About three quarters of the Sun's mass consists of hydrogen, while the rest is mostly helium. Less than 2% consists of heavier elements, including oxygen, carbon, neon, iron, and others.[11]</p>
+               <!-- <a id="toMercury" href="#mercuryAnchor" class="planetLink">To Mercury</a> --></div>
+        </div>
+        
+        <div id="mercury" class="planet">
+        <a id="mercuryAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="mercuryCard">
+                <h1>mercury</h1>
+                <p>Mercury is the innermost and smallest planet in the Solar System,[a] orbiting the Sun once every 87.969 days. The orbit of Mercury has the highest eccentricity of all the Solar System planets, and it has the smallest axial tilt. It completes three rotations about its axis for every two orbits. The perihelion of Mercury's orbit precesses around the Sun at an excess of 43 arcseconds per century; a phenomenon that was explained in the 20th century by Albert Einstein's General Theory of Relativity.[9] Mercury is bright when viewed from Earth, ranging from −2.3 to 5.7 in apparent magnitude, but is not easily seen as its greatest angular separation from the Sun is only 28.3°. Since Mercury is normally lost in the glare of the Sun, unless there is a solar eclipse, Mercury can only be viewed in morning or evening twilight.</p>
+                <a id="toVenus" href="#venusAnchor">To Venus</a> </div>
+        </div>
+        <div id="venus" class="planet">
+        	<a id="venusAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="venusCard">
+                <h1>venus</h1>
+                <p>Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. The planet is named after Venus, the Roman goddess of love and beauty. After the Moon, it is the brightest natural object in the night sky, reaching an apparent magnitude of −4.6, bright enough to cast shadows. Because Venus is an inferior planet from Earth, it never appears to venture far from the Sun: its elongation reaches a maximum of 47.8°. Venus reaches its maximum brightness shortly before sunrise or shortly after sunset, for which reason it is often called the Morning Star or the Evening Star.</p>
+                <a id="toEarth" href="#earthAnchor">To Earth</a> </div>
+        </div>
+
+        <div id="earth" class="planet">
+		  <!--<div class="ellipseTest"></div>-->
+		  <div id="theMoon">
+					<div class="infoPanel"><button>close</button>The Moon</div>
+					<div class="moon"><div class="info"></div></div>
+		  </div>
+        	<a id="earthAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="earthCard">
+                <h1>earth</h1>
+                <p>Earth is the third planet from the Sun, and the densest and fifth-largest of the eight planets in the Solar System. It is also the largest of the Solar System's four terrestrial planets. It is sometimes referred to as the World, the Blue Planet, or by its Latin name, Terra.
+                    [note 5]</p>
+                <!-- <p>Home to millions of species[16] including humans, Earth is currently the only place in the universe where life is known to exist. The planet formed 4.54 billion years ago,[17] and life appeared on its surface within a billion years. Since then, Earth's biosphere has significantly altered the atmosphere and other abiotic conditions on the planet, enabling the proliferation of aerobic organisms as well as the formation of the ozone layer which, together with Earth's magnetic field, blocks harmful solar radiation, permitting life on land.[18] The physical properties of the Earth, as well as its geological history and orbit, have allowed life to persist during this period. Without intervention, the planet could be expected to continue supporting life for between 0.5[19] and 2.3 billion[20] years, after which the rising luminosity and expansion of the Sun—as a result of the gradual but inexorable depletion of its hydrogen fuel—would eventually eliminate the planet's biosphere.[21]</p>--> 
+                <a id="toMars" href="#marsAnchor">To Mars</a> </div>
+        </div>
+        <div id="mars" class="planet">
+        	<a id="marsAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="marsCard">
+                <h1>mars</h1>
+                <p>Mars is the fourth planet from the Sun in the Solar System. The planet is named after the Roman god of war, Mars. It is often described as the "Red Planet", as the iron oxide prevalent on its surface gives it a reddish appearance.[11] Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the volcanoes, valleys, deserts, and polar ice caps of Earth. The rotational period and seasonal cycles of Mars are likewise similar to those of Earth. Mars is the site of Olympus Mons, the highest known mountain in the Solar System, and of Valles Marineris, the largest canyon. The smooth Borealis basin in the northern hemisphere covers 40% of the planet and may be a giant impact feature.[12][13] Unlike Earth, Mars is now geologically and tectonically inactive.[citation needed]</p>
+                <a id="toJupiter" href="#jupiterAnchor">To Jupiter</a> </div>
+        </div>
+        <div id="jupiter" class="planet">
+		  <div id="io">
+					<div class="moon"><div class="info"></div></div>
+		  </div>
+		  <div id="europa">
+					<div class="moon"><div class="info"></div></div>
+		  </div>
+		  <div id="ganymede">
+					<div class="moon"><div class="info"></div></div>
+		  </div>
+		  <div id="callisto" class="rotator"></div>
+        	<a id="jupiterAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="jupiterCard">
+                <h1>jupiter</h1>
+                <p>Jupiter is the fifth planet from the Sun and the largest planet within the Solar System.[13] It is a gas giant with a mass slightly less than one-thousandth of the Sun but is two and a half times the mass of all the other planets in our Solar System combined. Jupiter is classified as a gas giant along with Saturn, Uranus and Neptune. Together, these four planets are sometimes referred to as the Jovian planets.</p>
+                <a id="toSaturn" href="#saturnAnchor">To Saturn</a> </div>
+        </div>
+        <div id="saturn" class="planet">
+		  <div id="titan" class="rotator">
+					<div class="moon"><div class="info"></div></div>
+		  </div>
+		  <div id="rhea" class="rotator">
+					<div class="moon"><div class="info"></div></div>
+		  </div>
+        	<a id="saturnAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="saturnCard">
+                <h1>saturn</h1>
+                <p>Saturn is the sixth planet from the Sun and the second largest planet in the Solar System, after Jupiter. Saturn is named after the Roman god Saturn, equated to the Greek Cronus (the Titan father of Zeus) the Babylonian Ninurta and to the Hindu Shani. Saturn's symbol represents the god's sickle (Unicode: ♄).</p>
+                <a id="toNeptune" href="#neptuneAnchor">To Saturn</a> </div>
+            <div id="sRingA" class="sRing"></div>
+            <div id="sRingB" class="sRing"></div>
+            <div id="sRingC" class="sRing"></div>
+            <div id="sRingD" class="sRing"></div>
+            
+            <div id="saturnCopy"></div>
+             
+        </div>
+        
+        <div id="uranus" class="planet">
+        	<a id="uranusAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="uranusCard">
+                <h1>uranus</h1>
+                <p>Uranus is the seventh planet from the Sun, and the third-largest and fourth most massive planet in the Solar System. It is named after the ancient Greek deity of the sky Uranus (Ancient Greek: Οὐρανός) the father of Cronus (Saturn) and grandfather of Zeus (Jupiter). Though it is visible to the naked eye like the five classical planets, it was never recognized as a planet by ancient observers because of its dimness and slow orbit.[16] Sir William Herschel announced its discovery on March 13, 1781, expanding the known boundaries of the Solar System for the first time in modern history. Uranus was also the first planet discovered with a telescope.</p>
+            </div>
+        </div>
+        <div id="neptune" class="planet">
+        	<a id="neptuneAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="neptuneCard">
+                <h1>neptune</h1>
+                <p>Neptune is the eighth and farthest planet from the Sun in our Solar System. Named for the Roman god of the sea, it is the fourth-largest planet by diameter and the third-largest by mass. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus, which is 15 Earth masses and not as dense.[12] On average, Neptune orbits the Sun at a distance of 30.1 AU, approximately 30 times the Earth-Sun distance. Its astronomical symbol is , a stylized version of the god Neptune's trident.</p>
+            <a id="toUranus" href="#uranus">To Saturn</a></div>
+        </div>
+		<div id="pluto" class="planet">
+        	<a id="plutoAnchor" class="planetAnchor"></a>
+            <div class="card planetCard" id="neptuneCard">
+                <h1>pluto</h1>
+                <p>Neptune is the eighth and farthest planet from the Sun in our Solar System. Named for the Roman god of the sea, it is the fourth-largest planet by diameter and the third-largest by mass. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus, which is 15 Earth masses and not as dense.[12] On average, Neptune orbits the Sun at a distance of 30.1 AU, approximately 30 times the Earth-Sun distance. Its astronomical symbol is , a stylized version of the god Neptune's trident.</p>
+            <a id="toUranus" href="#uranus">To Saturn</a></div>
+        </div>
+        <!--<div id="pluto" class="planet dwarfPlanet">
+          <div class="card planetCard" id="plutoCard">
+            <h1>pluto</h1>
+            <p>Pluto, formal designation 134340 Pluto, is the second-largest known dwarf planet in the Solar System (after Eris) and the tenth-largest body observed directly orbiting the Sun. Originally classified as a planet, Pluto is now considered the largest member of a distinct population known as the Kuiper belt.[note 9]</p>
+          </div>
+        </div>
+        <div id="eris" class="planet dwarfPlanet">
+          <div class="card planetCard" id="erisCard">
+            <h1>eris</h1>
+            <p>Eris, formal designation 136199 Eris, is the largest known dwarf planet in the Solar System and the ninth-largest body known to orbit the Sun directly. It is approximately 2,500 kilometres in diameter and 27% more massive than Pluto.[9][13]</p>
+          </div>
+        </div>--> 
+    </div>
+   
+</div>
+</div>
+<!-- end scrollContent -->
+<div class="footer"></div>
+<!-- footer end --> 
+
+<!-- wrapper end -->
+</body>
+<script>
+
+
+
+
+
+$(function() {
+		  
+		  // settings abandoned for now
+		  var sunWidth = $('#sun').width();
+		  var mercWidth = sunWidth * 0.001752658045977;
+		  
+		  
+		  $('.large').click(function() {
+					//$('#sun').css({width: '2000px', height:'2000px', borderRadius: '1000px'});
+					$('#sun').animate({width:'2000', height: '2000', borderRadius: '1000'}, {duration: 100, queue:false});
+		  });
+		  
+
+		  
+		  //$('#mercury').width(mercWidth).height(mercWidth).prop('borderRadius', mercWidth/2);
+		  
+		  
+	
+});
+
+</script>
+</html>
