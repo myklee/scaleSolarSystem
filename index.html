@@ -5,12 +5,13 @@
 <title>Solar System to Scale</title>
 <link rel="stylesheet" href="fonts/stylesheet.css" />
 <link rel="stylesheet" href="styleVertical.css" />
-<link href='http://fonts.googleapis.com/css?family=Istok+Web&v2' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!--<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>-->
-<script type=="text/javascript" src=js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/customScripts.js"></script>
 <script type="text/javascript" src="js/animateEllipse.js"></script>
+<!--TypeKit-->
+<script type="text/javascript" src="http://use.typekit.com/ypc0fgd.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 
 </head>
@@ -23,7 +24,7 @@
 		  </div>
 		  
 <div class="nav">
-<ul class="navList">
+<ul class="navList planets">
 	<li class="sun"><a id="goSun" href="#sunAnchor" class="planetLink"><div class="ic16"></div><span class="iau">Sun</span><span class="fullName"></span></span></a><div class="closePanel">+</div></li>
 	<li class="me"><a id="goMercury" href="#mercuryAnchor" class="planetLink"><div class="ic16"></div><span class="iau">Me<span class="fullName">rcury</span></span></a><div class="closePanel">+</div></li>
 	<li class="v"><a id="goVenus" href="#venusAnchor" class="planetLink"><div class="ic16"></div><span class="iau">V<span class="fullName">enus</span></span></a><div class="closePanel">+</div></li>
@@ -34,9 +35,16 @@
 	<li class="u"><a id="goUranus" href="#uranusAnchor" class="planetLink"><div class="ic16"></div><span class="iau">U<span class="fullName">ranus</span></span></a><div class="closePanel">+</div></li>
 	<li class="n"><a id="goNeptune" href="#neptuneAnchor" class="planetLink"><div class="ic16"></div><span class="iau">N<span class="fullName">eptune</span></span></a><div class="closePanel">+</div></li>
 </ul>
-<div class="btnBox">
-		  <a id="showPluto" class="switch" href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a>
+<ul>
+		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
+		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
+		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
+		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
+		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
+</ul>
 </div>
+<div class="settings infoPanel">
+		   <div id="showDwarf" class="switch"></div>
 </div>
 <!--<div class="testBed">
 		  <div id="testExpandOn" class="switch "></div>
@@ -47,28 +55,31 @@
 </div>-->
 
 <div class="ruler">
-		  <div class="bgRuler">
+		  <div class="bgRuler infoPanel">
 					<div class="rulerGrid"></div>
 					<small class="infoPanel infoSmall"><h2>4.5 Billion Kilometres</h2>This bar represents the average distance from The Sun to Neptune, or the approximate size of the inner solar system.
 					</small>
 		  </div>
 		  <div id="au">
-					<p>AU</p>
+					<p class="tk-kepler-std">AU</p>
 					<small class="infoPanel infoSmall">An <strong>astronomical unit</strong> (abbreviated as AU, au, a.u., or ua.) is a unit of length equal to about 149,597,870.7-kilometre (92,955,807.3 mi) or approximately the mean Earth–Sun distance.
 					</small>
 		  </div>
-<div class="markerContainer"><div id="marker"><div class="markerHalf"></div></div></div>
+<div class="markerContainer"><div id="marker"></div></div>
 <div id="toggleCard">i</div>
-
-
 <div id="freeScroll" class="switch"></div>
 
 </div>
 
-
+<div class="header">
+		  <h1>the Solar System to Scale</h1>
+		  <p>The Solar System[a] consists of the Sun and the astronomical objects gravitationally bound in orbit around it, all of which formed from the collapse of a giant molecular cloud approximately 4.6 billion years ago. Of the many objects that orbit the Sun, most of the mass is contained within eight relatively solitary planets[e] whose orbits are almost circular and lie within a nearly flat disc called the ecliptic plane. The four smaller inner planets, Mercury, Venus, Earth and Mars, also called the terrestrial planets, are primarily composed of rock and metal. The four outer planets, the gas giants, are substantially more massive than the terrestrials. The two largest, Jupiter and Saturn, are composed mainly of hydrogen and helium; the two outermost planets, Uranus and Neptune, are composed largely of ices, such as water, ammonia and methane, and are often referred to separately as "ice giants".
+		  </p>
+		  
+</div>
 <div id="wrapper">
 <div id="mainInfo" class="mainPanel">
-		 
+		  <div class="closePanel">+</div>
 </div>
 
     <div id="planetContainer" class="block">

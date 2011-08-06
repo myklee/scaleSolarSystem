@@ -99,9 +99,10 @@ $(function() {
                 var $this = $(this);
                 $this.find('p').animate({left: '-25', top:'0', fontSize: '.7em'}, {duration:100, queue:false});
                 hideInfo($this);
-                $this.animate({opacity: '.3'}, {duration:100, queue:false});
+                $this.animate({opacity: '.5'}, {duration:100, queue:false});
                 });
-        
+        //markerHalf height
+        //$('.markerHalf').css('height', auHeight + '%');
          //universal marker scroll
         $('.planetLink').click(function () {              
                 var findAnchor = $(this).prop('href');
@@ -133,7 +134,7 @@ $(function() {
         var $navli = $('.navList li');
         var $lastSelected = $('.lastSelected');
         var $fullName = $('span.fullName');
-        var $closeBtn = $('.closePanel');
+        var $closeBtn = $('.navList .closePanel');
         var menuSpeed = 150;
         
         $fullName.hide('fast');       
@@ -298,7 +299,7 @@ $(function() {
                 $('body').toggleClass('freeScroll ');
         });
         
-        $('#showPluto').click(function() {
+        $('#showDwarf').click(function() {
                 $('#pluto').toggle(function() {
                         solarTotalHeight = ($('#planetContainer').height());
                         setAu();
