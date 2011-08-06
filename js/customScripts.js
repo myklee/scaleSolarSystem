@@ -54,12 +54,12 @@ $(function() {
                 var $this = $(this);
                 $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.5em'}, {duration:100, queue:false});
                 showInfo($this);
-                $this.animate({opacity: '1'}, {duration:100, queue:false});
+                $this.animate({opacity: '.66'}, {duration:100, queue:false});
         }, function() {
                 var $this = $(this);
                 $this.find('p').animate({left: '-25', top:'0', fontSize: '.7em'}, {duration:100, queue:false});
                 hideInfo($this);
-                $this.animate({opacity: '.5'}, {duration:100, queue:false});
+                $this.animate({opacity: '.3'}, {duration:100, queue:false});
                 });
         
         //Get and set the value of an au in px (appx the distance between the earth and the sun)
@@ -82,17 +82,24 @@ $(function() {
         };
         setAu();
         
+        $('#mainInfo').click(function(){
+                var $this = $(this);
+                $this.animate({width: '80%', right:'10%', height: '25%', opacity: '.66'}, {duration:100, queue:false},
+                              {//grab the correct info and show it
+                                //show close button
+                                });
+        });
         
         $au.hover(function(){
                 var $this = $(this);
                 $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.5em'}, {duration:100, queue:false});
                 showInfo($this);
-                $this.animate({opacity: '1'}, {duration:100, queue:false});
+                $this.animate({opacity: '.7'}, {duration:100, queue:false});
         }, function() {
                 var $this = $(this);
                 $this.find('p').animate({left: '-25', top:'0', fontSize: '.7em'}, {duration:100, queue:false});
                 hideInfo($this);
-                $this.animate({opacity: '.5'}, {duration:100, queue:false});
+                $this.animate({opacity: '.3'}, {duration:100, queue:false});
                 });
         
          //universal marker scroll
@@ -320,10 +327,12 @@ $(function() {
                         $gridCount.each(function() {
                                 gridHeight += parseFloat($(this).css('height'));
                                 gridHeight = gridHeight + 2;
+                                
                         });
                         $('.rulerGrid').css('height', auHeight + '%');
                         setAu();
                         $('.bgRuler').append('<div class=\"rulerGrid\"></div>');
+                        
                 };
         };
         drawAuGrid()
