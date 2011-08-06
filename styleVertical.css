@@ -38,6 +38,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+strong {
+	font-weight:bold;
+	color:#fff;
+}
 /* ----------------------
 
 End Reset
@@ -54,11 +58,12 @@ End Reset
 	display:none;
 }
 .ruler {
-	width:15px;
+	width:25px;
 	position:fixed;
-	right:30px;
+	right:0;
+	bottom:0;
 	margin-top:12%;
-	height:80%;
+	height:85%;
 	margin-left:30px;
 	 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     /* This works in IE 8 & 9 too */
@@ -93,11 +98,11 @@ End Reset
 	border-top:1px solid #666;
 	border-bottom:1px solid #666;
 	position:absolute;
-	left:-6px;
+	left:-10px;
 	opacity:.1;
 	z-index:10;
 	/*background:#666;*/
-	opacity:.3;
+	opacity:.5;
 }
 	#au p {
 		color:#fff;
@@ -131,8 +136,8 @@ End Reset
 /*Create the rulerGrids*/
 	.rulerGrid {
 		position:relative;
-		width:3px;
-		left:12px;
+		width:15px;
+		left:0;
 		border-bottom:1px solid #fff;
 	}
 .markerContainer {
@@ -143,7 +148,7 @@ End Reset
 	height:20px;
 }
 #marker {
-	opacity:.3;
+	opacity:.7;
 	border:1px solid #fff;
 	transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
@@ -158,12 +163,13 @@ End Reset
 		width:20px;
 		height:20px;
 		-webkit-transform:rotate(45deg);
-		background:#000;
+		background:#fff;
 		transform:rotate(45deg);	
 		position:absolute;
 		top:-10px;
 		left:0px;
 		z-index:9;
+		border-radius:3px;
 		
 	}
 #moveMarker {

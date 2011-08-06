@@ -45,7 +45,7 @@ $(function() {
         $('.planetAnchor').css('top', -height/2.1);
         
         function showInfo(e) {
-                e.find('.infoSmall').css('display','block').animate({opacity: '.5'}, {duration:300, queue:false});
+                e.find('.infoSmall').css('display','block').animate({opacity: '1'}, {duration:300, queue:false});
         }
         function hideInfo(e) {
                 e.find('.infoSmall').css('display','none').animate({opacity: '0'}, {duration:300, queue:false});
@@ -110,8 +110,8 @@ $(function() {
                     });
                 sum += thisAnchorMargin;
                 // make sure the event uses the correct solar height 
-                var newSolarHeight = parseFloat($('#planetContainer').height());
-                var percentTraveled = (sum/newSolarHeight)*100;
+                solarTotalHeight = parseFloat($('#planetContainer').height());
+                var percentTraveled = (sum/solarTotalHeight)*100;
                 
             $('.markerContainer').stop().animate({
                 top: percentTraveled + '%'
@@ -297,7 +297,8 @@ $(function() {
                         setAu();
                 });
                 $(this).toggleClass('switchOn');
-                var newSolarHeight = parseFloat($('#planetContainer').height());
+                
+                
         });
         $('#testExpandOn').click(function() {
                 $('.testExpand').toggle(100, 'swing', function() {
@@ -307,27 +308,25 @@ $(function() {
         });
         
         // Create the ruler grid in au
-        
-        var $gridCount = $('.rulerGrid');
-        var gridHeight = 0;
-        $('.rulerGrid').css('height', auHeight + '%');
-        
-        $gridCount.each(function() {
-                gridHeight += parseFloat($(this).css('height'));
-        });
-        
-        var rulerHeight = parseInt($('.bgRuler').height());
-        
-        while (gridHeight < rulerHeight) {
-                var auHeight = (au/solarTotalHeight)*100;
-                $('.bgRuler').append('<div class=\"rulerGrid\"></div>');
-                $gridCount.each(function() {
-                        gridHeight += parseFloat($(this).css('height'));
-                });
+        function drawAuGrid() {
+                var $gridCount = $('.rulerGrid');
+                var gridHeight = 0;
                 $('.rulerGrid').css('height', auHeight + '%');
-                setAu();
+                var rulerHeight = parseInt($('.bgRuler').height());
+                
+                while (gridHeight < rulerHeight) {
+                        var auHeight = (au/solarTotalHeight)*100;
+                        $('.bgRuler').append('<div class=\"rulerGrid\"></div>');
+                        $gridCount.each(function() {
+                                gridHeight += parseFloat($(this).css('height'));
+                                gridHeight = gridHeight + 2;
+                        });
+                        $('.rulerGrid').css('height', auHeight + '%');
+                        setAu();
+                        $('.bgRuler').append('<div class=\"rulerGrid\"></div>');
+                };
         };
-        
+        drawAuGrid()
      
         
         
