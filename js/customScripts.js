@@ -96,8 +96,8 @@ $(function() {
                 showInfo($this);
                 $this.animate({opacity: '.7'}, {duration:100, queue:false});
         }, function() {
-                var $this = $(this);
-                $this.find('p').animate({left: '-25', top:'0', fontSize: '.7em'}, {duration:100, queue:false});
+                var $this = $(this)
+                $this.find('p').animate({left: '-35', top:'0', fontSize: '1em'}, {duration:100, queue:false});
                 hideInfo($this);
                 $this.animate({opacity: '.5'}, {duration:100, queue:false});
                 });
@@ -162,7 +162,7 @@ $(function() {
                         $this.animate({
                                 width:'30%',
                                 height: '70',
-                                fontSize: '1.33em',
+                                fontSize: '1.4em',
                                 borderBottomRightRadius: '1em',
                                 borderBottomLeftRadius: '1em',
                                 borderLeft: '5px',
@@ -294,7 +294,18 @@ $(function() {
         ioOrbit();
         
         // controls/switches
-        
+        $('#toIntro').click(function(){
+                $(window).scrollTop(0);
+                $('.markerContainer').stop().animate({
+                top: '0%'
+                }, {
+                duration:scrollSpeedGlobal,
+                queue:false
+                });
+                resetPanels();
+                $('.lastSelected').removeClass('lastSelected');
+                
+        })
         $('#freeScroll').click(function() {
                 $('body').toggleClass('freeScroll ');
         });

@@ -23,7 +23,7 @@
 					<div class="star1"></div>
 		  </div>
 		  
-<div class="nav">
+<header class="nav">
 <ul class="navList planets">
 	<li class="sun"><a id="goSun" href="#sunAnchor" class="planetLink"><div class="ic16"></div><span class="iau">Sun</span><span class="fullName"></span></span></a><div class="closePanel">+</div></li>
 	<li class="me"><a id="goMercury" href="#mercuryAnchor" class="planetLink"><div class="ic16"></div><span class="iau">Me<span class="fullName">rcury</span></span></a><div class="closePanel">+</div></li>
@@ -35,16 +35,17 @@
 	<li class="u"><a id="goUranus" href="#uranusAnchor" class="planetLink"><div class="ic16"></div><span class="iau">U<span class="fullName">ranus</span></span></a><div class="closePanel">+</div></li>
 	<li class="n"><a id="goNeptune" href="#neptuneAnchor" class="planetLink"><div class="ic16"></div><span class="iau">N<span class="fullName">eptune</span></span></a><div class="closePanel">+</div></li>
 </ul>
-<ul>
+<ul class="dwarfList">
 		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
 		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
 		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
 		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
 		  <li><a id="goPluto"  href="#plutoAnchor" class="planetLink dwarfLink"><div>pluto</div></a></li>
 </ul>
-</div>
+</header>
 <div class="settings infoPanel">
-		   <div id="showDwarf" class="switch"></div>
+		  <div id="toIntro" class="switch toIntro"></div>
+		  <div id="showDwarf" class="switch"></div>
 </div>
 <!--<div class="testBed">
 		  <div id="testExpandOn" class="switch "></div>
@@ -71,12 +72,16 @@
 
 </div>
 
-<div class="header">
+<section class="section intro tk-kepler-std">
 		  <h1>the Solar System to Scale</h1>
-		  <p>The Solar System[a] consists of the Sun and the astronomical objects gravitationally bound in orbit around it, all of which formed from the collapse of a giant molecular cloud approximately 4.6 billion years ago. Of the many objects that orbit the Sun, most of the mass is contained within eight relatively solitary planets[e] whose orbits are almost circular and lie within a nearly flat disc called the ecliptic plane. The four smaller inner planets, Mercury, Venus, Earth and Mars, also called the terrestrial planets, are primarily composed of rock and metal. The four outer planets, the gas giants, are substantially more massive than the terrestrials. The two largest, Jupiter and Saturn, are composed mainly of hydrogen and helium; the two outermost planets, Uranus and Neptune, are composed largely of ices, such as water, ammonia and methane, and are often referred to separately as "ice giants".
-		  </p>
+		  <p><div class="onePx"></div>1px ~ 1,392km</p>
 		  
-</div>
+		  <p> <!--The Solar System[a] consists of the Sun and the astronomical objects gravitationally bound in orbit around it, all of which formed from the collapse of a giant molecular cloud approximately 4.6 billion years ago. Of the many objects that orbit the Sun, most of the mass is contained within eight relatively solitary planets[e] whose orbits are almost circular and lie within a nearly flat disc called the ecliptic plane. The four smaller inner planets, Mercury, Venus, Earth and Mars, also called the terrestrial planets, are primarily composed of rock and metal. The four outer planets, the gas giants, are substantially more massive than the terrestrials. The two largest, Jupiter and Saturn, are composed mainly of hydrogen and helium; the two outermost planets, Uranus and Neptune, are composed largely of ices, such as water, ammonia and methane, and are often referred to separately as "ice giants".-->
+		  </p>
+		  <blockquote>"Measure what can be measured, and make measurable what cannot be measured." 
+<span class="byline">— Galileo Galilei</span></blockquote>
+		  
+</section>
 <div id="wrapper">
 <div id="mainInfo" class="mainPanel">
 		  <div class="closePanel">+</div>
@@ -127,6 +132,9 @@
                 <p>Mars is the fourth planet from the Sun in the Solar System. The planet is named after the Roman god of war, Mars. It is often described as the "Red Planet", as the iron oxide prevalent on its surface gives it a reddish appearance.[11] Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the volcanoes, valleys, deserts, and polar ice caps of Earth. The rotational period and seasonal cycles of Mars are likewise similar to those of Earth. Mars is the site of Olympus Mons, the highest known mountain in the Solar System, and of Valles Marineris, the largest canyon. The smooth Borealis basin in the northern hemisphere covers 40% of the planet and may be a giant impact feature.[12][13] Unlike Earth, Mars is now geologically and tectonically inactive.[citation needed]</p>
                 <a id="toJupiter" href="#jupiterAnchor">To Jupiter</a> </div>
         </div>
+		<div id="asteroidBelt">
+		  <div id="ceres"></div>
+		</div>
         <div id="jupiter" class="planet">
 		  <div id="io">
 					<div class="moon"><div class="info"></div></div>
@@ -212,27 +220,6 @@
 
 
 
-
-
-$(function() {
-		  
-		  // settings abandoned for now
-		  var sunWidth = $('#sun').width();
-		  var mercWidth = sunWidth * 0.001752658045977;
-		  
-		  
-		  $('.large').click(function() {
-					//$('#sun').css({width: '2000px', height:'2000px', borderRadius: '1000px'});
-					$('#sun').animate({width:'2000', height: '2000', borderRadius: '1000'}, {duration: 100, queue:false});
-		  });
-		  
-
-		  
-		  //$('#mercury').width(mercWidth).height(mercWidth).prop('borderRadius', mercWidth/2);
-		  
-		  
-	
-});
 
 </script>
 </html>
