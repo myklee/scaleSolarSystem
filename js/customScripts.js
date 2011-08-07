@@ -35,21 +35,33 @@ $(function() {
             
         });
         
-            
-        $('.navList li').hover(function() { $(this).animate({'opacity':'1'}, {duration:300, easing:'swing', queue:false});
-            }, function() { $(this).animate({'opacity':'.5'}, {duration:300, easing:'swing', queue:false});
+         
+        $('.navList li').hover(function() {
+                var $this = $(this);
+                $this.animate({'opacity':'1'}, {duration:100, easing:'swing', queue:false});
+                $this.addClass('color');
+                
+            }, function() {
+                var $this = $(this);
+                $(this).animate({'opacity':'.5'}, {duration:100, easing:'swing', queue:false});
+                if ($this.hasClass('lastSelected')) {
+                }else {
+                        $this.removeClass('color');
+                };
             });
         
-        //to center align vertically the planet (positioning the anchor with negative top value)
-        var height = $(window).height();
-        $('.planetAnchor').css('top', -height/2.1);
         
+        // show or hide info
         function showInfo(e) {
                 e.find('.infoSmall').css('display','block').animate({opacity: '1'}, {duration:300, queue:false});
         }
         function hideInfo(e) {
                 e.find('.infoSmall').css('display','none').animate({opacity: '0'}, {duration:300, queue:false});
         }
+        //to center align vertically the planet (positioning the anchor with negative top value)
+        var height = $(window).height();
+        $('.planetAnchor').css('top', -height/2.1);
+        
         $('.bgRuler').hover(function(){
                 var $this = $(this);
                 $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.5em'}, {duration:100, queue:false});
@@ -73,15 +85,17 @@ $(function() {
         var $au = $('#au');
         
         //set au as percentage for ruler
-        
-        
         function setAu() {
                 auHeight = (au/solarTotalHeight)*100;
                 $au.css('height', auHeight + '%');
                 $('.rulerGrid').css('height', auHeight + '%');
+                $('#au').height($('.rulerGrid').height());
         };
         setAu();
-        
+        $(window).resize(function() {
+                $('#au').height($('.rulerGrid').height());
+        });
+       
         $('#mainInfo').click(function(){
                 var $this = $(this);
                 $this.animate({width: '80%', right:'10%', height: '25%', opacity: '.66'}, {duration:100, queue:false},
@@ -93,12 +107,12 @@ $(function() {
         $au.hover(function(){
                 var $this = $(this);
                 $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.33em'}, {duration:100, queue:false});
-                showInfo($this);
+                
                 $this.animate({opacity: '.7'}, {duration:100, queue:false});
         }, function() {
                 var $this = $(this)
                 $this.find('p').animate({left: '-35', top:'0', fontSize: '1em'}, {duration:100, queue:false});
-                hideInfo($this);
+        
                 $this.animate({opacity: '.5'}, {duration:100, queue:false});
                 });
         //markerHalf height
@@ -128,7 +142,13 @@ $(function() {
                 queue:false
                 });
             });
-        
+        $(window).scroll(function() {
+                $('.markerContainer').css({
+                  top: ($(window).scrollTop()/solarTotalHeight)*100 + '%'
+                  });
+                
+                
+        });
         // navList menu animations  
         var panelSpeed = 100;
         var $navli = $('.navList li');
@@ -137,11 +157,14 @@ $(function() {
         var $closeBtn = $('.navList .closePanel');
         var menuSpeed = 150;
         
-        $fullName.hide('fast');       
+        $fullName.hide('fast');
+        
+        //set inital nav item widths        
+        $navli.width(parseFloat(100/$navli.length) + '%');
         
         $('.navList li').click(function() {
                 var $this = $(this);
-        
+                $navli.not(this).removeClass('color');
                 $navli.not('.lastSelected').find($fullName).hide(menuSpeed);
                 // if full name is hidden of clicked item 
                 if ($this.find($fullName).is(':hidden') == true) {
@@ -152,7 +175,7 @@ $(function() {
                         $this.find($fullName).show(menuSpeed);
                         
                         $navli.not(this).animate({
-                                width: parseInt(80/$navli.not(this).length) + '%'
+                                width: parseFloat(80/$navli.not(this).length) + '%'
                                 }, {
                                 duration:menuSpeed,
                                 queue:false
@@ -218,7 +241,7 @@ $(function() {
                 var $this = $(this);
                 $navli.animate({
                         height: '50',
-                        width: '11.11111%',
+                        width: parseFloat(100/$navli.length) + '%',
                         fontSize: '1em',
                         borderBottomRightRadius: '0px',
                         borderBottomLeftRadius: '0px'

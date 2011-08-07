@@ -43,7 +43,7 @@ table {
 }
 strong {
 	font-weight:bold;
-	color:#fff;
+	color:#ddd;
 }
 /* ----------------------
 
@@ -66,12 +66,13 @@ section.intro {
 	padding-top:180px;
 	width:45em;
 }
-section.intro p, section.intro blockquote {
+
+section.intro blockquote {
 	font-size:1.3em;
 	font-family:
-	font-weight:lighter;
+	font-weight:300;
+	font-style:normal;
 	color:#999;
-	letter-spacing:1px;
 }
 section.intro blockquote {
 	font-size:1.5em;
@@ -126,53 +127,61 @@ blockquote span.flare {
 	box-shadow: inset rgba(0, 0, 0, .7) 0px 0px 8px 0px;
 	border-left:1px solid #aaa;
 	border-top:1px solid #aaa;
-
+	border-radius:2px;
 }
 	.bgRuler .infoSmall {
 		position:fixed;
 		top:45%;
 		right:5em;
 	}
-#au {
+/* legend */
+section.intro .legend {
+	font-family:arial;
+	color:#666;
+}
+.legendItem {
+	margin-bottom:2em;
+}
+.legendItem p {
+	font-size:.75em;
+}
+.onePx {
+	position:relative;
+	left:10px;
 	
+}
+.onePx sup {
+	font-size:.5em;
+	position:relative;
+	bottom:.5em;
+}
+.pixel {
+	background:#fff;
+	width:1px;
+	height:1px;
+	position:relative;
+	top:10px;
+}
+#au {
+	float:left;
 	width:5px;
-	font-weight:bold;
 	border-left:1px solid #666;
 	border-top:1px solid #666;
 	border-bottom:1px solid #666;
-	position:absolute;
-	left:-12px;
-	z-index:10;
-	/*background:#666;*/
 	opacity:.5;
 }
-	#au p {
-		color:#fff;
-		position:absolute;
-		left:-35px;
-		font-size:1em;
-		line-height:1.5em;
-		width:3em;
-		height:3em;
-		padding:.5em;
-		/*
-		background:#555;
-		box-shadow:inset 0 0 5px #fff;*/
-	
-	}
-	#au .infoSmall {
-		position:absolute;
-		top:3em;
-		right:1.5em;
-		box-sizing:border-box;
-	}
+.auDef {
+	position:relative;
+	left:5px;
+	top:5px;
+}
+
 	.ruler small.infoSmall {
 		line-height:1.3em;
 		width:20em;
 		padding:1em;
 		opacity:0;
 		display:none;
-		font-size:.75em;
 	}
 /*Create the rulerGrids*/
 	.rulerGrid {
@@ -184,19 +193,22 @@ blockquote span.flare {
 .markerContainer {
 	position:absolute;
 	top:0;
-	left:20px;
-	width:20px;
-	height:20px;
+	margin-top:-4px;
+	left:-7px;
+	width:10px;
+	height:10px;
+	overflow:hidden;
 }
 #marker {
 	opacity:.75;
 	transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
-	width:18px;
-	height:18px;
+	width:10px;
+	height:10px;
 	background:#fff;
 	position:absolute;
-	top:-8px;
+	top:0;
+	left:-6px;
 	z-index:101;
 	background:#10597e;
 	background: -moz-linear-gradient(top,  #0A3951,  #10597e); /* for firefox 3.6+ */
@@ -246,17 +258,20 @@ blockquote span.flare {
   ----------------*/
 .settings {
 	position:fixed;
-	top:15%;
-	padding:.5em;
-
+	right:5px;
+	top:75px;
+	z-index:200;
 }
-.switch {
-	width:10px;
-	height:10px;
-	border-radius:5px;
+
+#toIntro {
 	box-sizing:border-box;
-	border:1px solid #fff;
+	width:20px;
+	height:20px;
+	padding:3px 0 0 8px;
+	color:#fff;
+	border-radius:2px;
 	cursor:pointer;
+	background:#777;
 	opacity:.5;
 }
 .switchOn {
@@ -272,7 +287,7 @@ blockquote span.flare {
 	display:none;
 }
 .freeScroll {
-	overflow:hidden;
+	
 }
 .toggleCard {
 	width:1em;
@@ -372,6 +387,7 @@ blockquote span.flare {
 	opacity:.3;
 	font-size:.75em;
 	z-index:1000;
+	display:none;
 }
 #mainInfo a {
 	color:#fff;
@@ -449,7 +465,6 @@ position:relative;
 .navList li {
 	display:block;
 	float:left;
-	width:11.11111111%;
 	height:50px;
 	box-sizing:border-box;
 	text-align:center;
@@ -499,17 +514,17 @@ position:relative;
 .navList li.s,
 .navList li.u,
 .navList li.n {
-	border-bottom:8px solid;	
+	border-bottom:8px solid #333;	
 }
-.navList li.sun {border-bottom-color: #ffd700;}
-.navList li.me {border-bottom-color: #F93;}
-.navList li.v {border-bottom-color: #639;}
-.navList li.e {border-bottom-color: #1F43B8;}
-.navList li.ma {border-bottom-color: #c00;}
-.navList li.j {border-bottom-color: #FC6;}
-.navList li.s {border-bottom-color: #cf6;}
-.navList li.u {border-bottom-color: #6ff;}
-.navList li.n {border-bottom-color: #699;}
+.navList li.sun.color  {border-bottom-color: #ffd700;}
+.navList li.me.color  {border-bottom-color: #F93;}
+.navList li.v.color  {border-bottom-color: #639;}
+.navList li.e.color  {border-bottom-color: #1F43B8;}
+.navList li.ma.color  {border-bottom-color: #c00;}
+.navList li.j.color  {border-bottom-color: #FC6;}
+.navList li.s.color  {border-bottom-color: #cf6;}
+.navList li.u.color  {border-bottom-color: #6ff;}
+.navList li.n.color  {border-bottom-color: #699;}
 
 /*.navList li.sun .closePanel {background-color: #ffd700;}
 .navList li.me  .closePanel {background-color: #F93;}
@@ -562,12 +577,11 @@ position:relative;
 .planetLink .iau {
 	color:#ccc;
 	position:relative;
-	top:1em;
+	top:15px;
 	font-weight:bold;
 	display:inline-block;
 	position:relative;
 	text-shadow: rgba(0,0,0, .3) -1px -1px 1px;
-	font-size:1.33em;
 	
 }
 
