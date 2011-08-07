@@ -21,11 +21,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
 	line-height: 1;
 	background:#000;
+	font-weight:300;
+	font-style:normal;
 }
 section {
 	color:#fff;
-	font-family: kepler-std, georgia;
-	font-weight:lighter;
 }
 ol, ul {
 	list-style: none;
@@ -61,7 +61,8 @@ section.intro h2 {
 	color:rgba(247,233,200, 1);
 }
 section.intro {
-	margin-left:200px;
+	position:relative;
+	margin-left:15%;
 	padding-top:180px;
 	width:45em;
 }
@@ -312,13 +313,35 @@ blockquote span.flare {
 	font-size:.75em;
 	display:none;
 }
-/*
-#sunCard.card {
-	position: absolute;
-	left:0;
-	top:-20em;
-}*/
-/* panels general*/
+
+/* panels general -pg- */
+.tip {
+	position:absolute;
+	background:#222;
+	padding:.25em 1em;
+	font-size:10px;
+	text-shadow: rgba(0,0,0, 1) 0px 0px 2px;
+	text-transform:uppercase;
+	font-family:arial;
+	color:#666;	
+}
+.tip p {
+	z-index:200;
+}
+.arrowUp {
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	width:18px;
+	height:18px;
+	background:#222;
+	position:absolute;
+	top:-8px;
+	z-index:0;
+}
+#tipNav {
+	left:-10em;
+	top:100px;
+}
 .infoPanel {
 	background:#777;
 	opacity:.3;
@@ -444,7 +467,7 @@ position:relative;
 	height:15px;
 	position:absolute;
 	right:.25em;
-	top:35px;
+	top:15px;
 	color:#666;
 	transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
@@ -475,7 +498,7 @@ position:relative;
 .navList li.s,
 .navList li.u,
 .navList li.n {
-	border-bottom:5px solid;	
+	border-bottom:8px solid;	
 }
 .navList li.sun {border-bottom-color: #ffd700;}
 .navList li.me {border-bottom-color: #F93;}
@@ -532,7 +555,6 @@ position:relative;
 }
 
 .fullName {
-
 	text-transform:uppercase;
 	display:none;
 }

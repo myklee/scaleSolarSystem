@@ -92,7 +92,7 @@ $(function() {
         
         $au.hover(function(){
                 var $this = $(this);
-                $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.5em'}, {duration:100, queue:false});
+                $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.33em'}, {duration:100, queue:false});
                 showInfo($this);
                 $this.animate({opacity: '.7'}, {duration:100, queue:false});
         }, function() {
@@ -161,10 +161,10 @@ $(function() {
                         
                         $this.animate({
                                 width:'30%',
-                                height: '70',
-                                fontSize: '1.4em',
-                                borderBottomRightRadius: '1em',
-                                borderBottomLeftRadius: '1em',
+                                height: '58',
+                                fontSize: '1.16em',
+                                borderBottomRightRadius: '8px',
+                                borderBottomLeftRadius: '8px',
                                 borderLeft: '5px',
                                 borderRight: '5px'
                         }, {
@@ -243,9 +243,6 @@ $(function() {
                         }, {    duration:menuSpeed,
                                 queue:false
                         });
-        
-                
-        
         };
         
         //animate the background on the scroll
@@ -347,7 +344,7 @@ $(function() {
                         
                 };
         };
-        drawAuGrid()
+        drawAuGrid();
      
         
         
