@@ -152,7 +152,7 @@ $(function() {
                         $this.find($fullName).show(menuSpeed);
                         
                         $navli.not(this).animate({
-                                width: '8.75%'
+                                width: parseInt(80/$navli.not(this).length) + '%'
                                 }, {
                                 duration:menuSpeed,
                                 queue:false
@@ -160,7 +160,7 @@ $(function() {
                         $this.css('cursor', 'normal');
                         
                         $this.animate({
-                                width:'30%',
+                                width:'20%',
                                 height: '58',
                                 fontSize: '1.16em',
                                 borderBottomRightRadius: '8px',

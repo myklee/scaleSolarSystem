@@ -443,6 +443,7 @@ position:relative;
 }
 .navList {
 	margin:0 auto;
+	width:100%;
 	
 }
 .navList li {
