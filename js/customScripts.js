@@ -375,9 +375,16 @@ $(function() {
         $(window).scroll(function(){
         var $counter = $('.counter');
         var currentPx = ($(window).scrollTop() - 1955)*1392 + ' km';
-        $counter.text(currentPx);
+        $counter.text(currentPx).digits();
         
         });
+        
+        //plugin for adding commas to numbers
+        $.fn.digits = function(){ 
+            return this.each(function(){ 
+                $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+            })
+        }
      
         
         
