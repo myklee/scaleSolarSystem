@@ -42,7 +42,7 @@ table {
 	border-spacing: 0;
 }
 strong {
-	font-weight:bold;
+	font-weight:normal;
 	color:#ddd;
 }
 /* ----------------------
@@ -57,29 +57,37 @@ section.intro h1 {
 }
 section.intro h2 {
 	font-size:2em;
-	text-shadow: rgba(255,255,255, .75) -1px -1px -1px;
+	
 	color:rgba(247,233,200, 1);
 }
 section.intro {
 	position:relative;
 	margin-left:15%;
-	padding-top:180px;
-	width:45em;
+	padding-top:220px;
+	width:50em;
 }
 
 section.intro blockquote {
-	font-size:1.3em;
-	font-family:
+	margin:1.5em 0;	
+	font-size:2em;
 	font-weight:300;
 	font-style:normal;
 	color:#999;
+	width:20em;
+	line-height:1.33em;
+	letter-spacing:1px;
+	text-shadow: rgba(255,255,255, .3) -1px -1px 1px;
+	font-style:italic;
+}
+.byline {
+	display:block;
+	color:#ddd;
+	margin-top:.5em;
 }
 section.intro blockquote {
-	font-size:1.5em;
-	margin:2em 0;
-	line-height:1.75em;
-	font-style:italic;
-	font-weight:lighter;
+	
+
+	
 }
 blockquote span.flare {
 	display:inline-block;
@@ -101,7 +109,7 @@ blockquote span.flare {
 .ruler {
 	width:25px;
 	position:fixed;
-	right:.5%;
+	right:1%;
 	bottom:0;
 	height:90%;
 	margin-left:30px;
@@ -124,7 +132,7 @@ blockquote span.flare {
 	width:100%;
 	height:100%;
 	position:absolute;
-	box-shadow: inset rgba(0, 0, 0, .7) 0px 0px 8px 0px;
+	box-shadow: inset rgba(0, 0, 0, .5) 0px 0px 12px 0px;
 	border-left:1px solid #aaa;
 	border-top:1px solid #aaa;
 	border-right:1px solid #aaa;
@@ -169,7 +177,7 @@ section.intro .legend {
 	border-left:1px solid #666;
 	border-top:1px solid #666;
 	border-bottom:1px solid #666;
-	opacity:.5;
+	opacity:1;
 }
 .auDef {
 	position:relative;
@@ -258,25 +266,27 @@ section.intro .legend {
   
   ----------------*/
 .settings {
-	position:fixed;
-	right:10px;
-	top:70px;
-	z-index:200;
+	
 }
 
 #toIntro {
+	position:fixed;
+	right:14px;
+	top:63px;
+	z-index:200;
 	box-sizing:border-box;
-	padding:2px 0 0 8px;
+	padding:2px 0 0 7px;
 	color:#fff;
 	width:20px;
 	height:20px;
 	border-radius:10px;
 	cursor:pointer;
 	opacity:.5;
-	background:#777;
+	background:#666;
 	box-shadow:inset rgba(0,0,0, .5) 0px 0px 5px 0px;
-	border-top:1px solid #aaa;
-	border-bottom:1px solid #ccc;
+	border:1px solid #aaa;
+/*	border-top:1px solid #aaa;
+	border-bottom:1px solid #ccc;*/
 
 }
 .switchOn {

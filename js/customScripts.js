@@ -351,7 +351,7 @@ $(function() {
                 var $gridCount = $('.rulerGrid');
                 var gridHeight = 0;
                 $('.rulerGrid').css('height', auHeight + '%');
-                var rulerHeight = parseInt($('.bgRuler').height());
+                var rulerHeight = parseFloat($('.bgRuler').height());
                 
                 while (gridHeight < rulerHeight) {
                         var auHeight = (au/solarTotalHeight)*100;
