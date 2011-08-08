@@ -52,7 +52,7 @@ End Reset
 --------------------------*/
 section.intro h1 {
 	font-size:4em;
-	text-shadow: rgba(255,255,255, .75) -1px -1px -1px;
+	text-shadow: rgba(255,255,255, .5) -1px -1px 1px;
 	color:rgba(247,233,200, 1);
 }
 section.intro h2 {
@@ -107,10 +107,10 @@ blockquote span.flare {
 	display:none;
 }
 .ruler {
-	width:25px;
+	width:20px;
 	position:fixed;
 	right:1%;
-	bottom:0;
+	bottom:1%;
 	height:90%;
 	margin-left:30px;
 	 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -133,10 +133,10 @@ blockquote span.flare {
 	height:100%;
 	position:absolute;
 	box-shadow: inset rgba(0, 0, 0, .5) 0px 0px 12px 0px;
-	border-left:1px solid #aaa;
-	border-top:1px solid #aaa;
+	border:1px solid #aaa;
+	/*border-top:1px solid #aaa;
 	border-right:1px solid #aaa;
-	border-radius:2px;
+	border-radius:2px;*/
 }
 	.bgRuler .infoSmall {
 		position:fixed;
@@ -147,6 +147,27 @@ blockquote span.flare {
 section.intro .legend {
 	font-family:arial;
 	color:#666;
+	background: rgba(175, 175, 175, .1);
+	padding:3em 3em 0 3em;
+	/*margin-left:-3em;*/
+	display:inline-block;
+	position:relative;
+	box-shadow: inset rgba(0, 0, 0, .75) 0px 0px 12px 0px;
+	border:1px solid #222;
+}
+.legend label {
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	background: rgba(175, 175, 175, .1);
+	font-size:.66em;
+	font-family:kepler std;
+	font-weight:300;
+	text-transform:uppercase;
+	letter-spacing:.25em;
+	padding:.4em .70em;
+	color:#333;
 }
 .legendItem {
 	margin-bottom:2em;
@@ -185,13 +206,6 @@ section.intro .legend {
 	top:5px;
 }
 
-	.ruler small.infoSmall {
-		line-height:1.3em;
-		width:20em;
-		padding:1em;
-		opacity:0;
-		display:none;
-	}
 /*Create the rulerGrids*/
 	.rulerGrid {
 		position:relative;
@@ -214,29 +228,29 @@ section.intro .legend {
 	-webkit-transform:rotate(45deg);
 	width:10px;
 	height:10px;
-	background:#fff;
+	
 	position:absolute;
 	top:0;
 	left:-6px;
 	z-index:101;
 	background:#10597e;
-	background: -moz-linear-gradient(top,  #0A3951,  #10597e); /* for firefox 3.6+ */
-	background: -webkit-gradient(radial, 50% 0%, 3, 50% 0%, 10, from(#ccc), to(#ddd));
-}
-	/*.markerHalf {
-		width:20px;
-		height:20px;
-		-webkit-transform:rotate(45deg);
-		background:#fff;
-		transform:rotate(45deg);	
-		position:absolute;
-		top:-10px;
-		left:0px;
-		z-index:9;
-		border-radius:2px;
-		
-	}*/
+	background:rgba(247,233,200, 1);
 
+
+}
+
+/* counter */
+.counter {
+	color:#666;
+	position:absolute;
+	top:-5px;
+	right:50px;
+	font-family:sans-serif;
+	font-size:.66em;
+	letter-spacing:1px;
+	white-space:nowrap;
+	
+}
 .sunGlow {box-shadow:0px 0px 10px #ffd700;}
 .meGlow {box-shadow:0px 0px 10px #F93;}
 .vGlow {box-shadow:0px 0px 10px #639;}
@@ -271,23 +285,28 @@ section.intro .legend {
 
 #toIntro {
 	position:fixed;
-	right:14px;
-	top:63px;
+	left:10px;
+	top:7%;
 	z-index:200;
-	box-sizing:border-box;
-	padding:2px 0 0 7px;
-	color:#fff;
-	width:20px;
-	height:20px;
-	border-radius:10px;
 	cursor:pointer;
-	opacity:.5;
-	background:#666;
-	box-shadow:inset rgba(0,0,0, .5) 0px 0px 5px 0px;
+	opacity:.3;
+	padding:.15em .5em;
+	background:#777;
+	box-shadow:inset rgba(0,0,0, .5) 0px 0px 10px 0px;
 	border:1px solid #aaa;
 /*	border-top:1px solid #aaa;
 	border-bottom:1px solid #ccc;*/
-
+}
+#toIntro a {
+	color:#fff;
+	font-size:.5em;
+	font-family:sans-serif;
+	text-transform:uppercase;
+	text-decoration:none;
+	letter-spacing:.25em;
+	position:relative;
+	bottom:1px;
+	
 }
 .switchOn {
 	opacity:1;
@@ -346,14 +365,13 @@ section.intro .legend {
 
 /* panels general -pg- */
 .tip {
-	position:absolute;
 	background:#222;
 	padding:.25em 1em;
-	font-size:10px;
 	text-shadow: rgba(0,0,0, 1) 0px 0px 2px;
-	text-transform:uppercase;
 	font-family:arial;
-	color:#666;	
+	color:#666;
+	display:inline-block;
+	margin-top:1.5em;
 }
 .tip p {
 	z-index:200;

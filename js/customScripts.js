@@ -38,12 +38,11 @@ $(function() {
          
         $('.navList li').hover(function() {
                 var $this = $(this);
-                $this.animate({'opacity':'1'}, {duration:100, easing:'swing', queue:false});
+                $this.animate({'opacity':'1'}, {duration:200, easing:'swing', queue:false});
                 $this.addClass('color');
-                
             }, function() {
                 var $this = $(this);
-                $(this).animate({'opacity':'.5'}, {duration:100, easing:'swing', queue:false});
+                $this.animate({'opacity':'.5'}, {duration:200, easing:'swing', queue:false});
                 if ($this.hasClass('lastSelected')) {
                 }else {
                         $this.removeClass('color');
@@ -314,7 +313,8 @@ $(function() {
         ioOrbit();
         
         // controls/switches
-        $('#toIntro').click(function(){
+        var $toIntro = $('#toIntro');
+        $toIntro.click(function(){
                 $('.markerContainer').stop().animate({
                 top: '0%'
                 }, {
@@ -326,6 +326,7 @@ $(function() {
                 $(window).scrollTop(0)
                 
         })
+        
         $('#freeScroll').click(function() {
                 $('body').toggleClass('freeScroll ');
         });
@@ -368,6 +369,15 @@ $(function() {
                 };
         };
         drawAuGrid();
+        
+        
+        //counter
+        $(window).scroll(function(){
+        var $counter = $('.counter');
+        var currentPx = ($(window).scrollTop() - 1955)*1392 + ' km';
+        $counter.text(currentPx);
+        
+        });
      
         
         
