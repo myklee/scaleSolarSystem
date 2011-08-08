@@ -103,18 +103,18 @@ $(function() {
                                 //show close button
                                 });
         });
-        
-        $au.hover(function(){
-                var $this = $(this);
-                $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.33em'}, {duration:100, queue:false});
-                
-                $this.animate({opacity: '.7'}, {duration:100, queue:false});
-        }, function() {
-                var $this = $(this)
-                $this.find('p').animate({left: '-35', top:'0', fontSize: '1em'}, {duration:100, queue:false});
-        
-                $this.animate({opacity: '.5'}, {duration:100, queue:false});
-                });
+        //
+        //$au.hover(function(){
+        //        var $this = $(this);
+        //        $this.find('p').animate({left: '-2.25em', top:'-.75em', fontSize: '1.33em'}, {duration:100, queue:false});
+        //        
+        //        $this.animate({opacity: '.7'}, {duration:100, queue:false});
+        //}, function() {
+        //        var $this = $(this)
+        //        $this.find('p').animate({left: '-35', top:'0', fontSize: '1em'}, {duration:100, queue:false});
+        //
+        //        $this.animate({opacity: '.5'}, {duration:100, queue:false});
+        //        });
         //markerHalf height
         //$('.markerHalf').css('height', auHeight + '%');
          //universal marker scroll
@@ -143,7 +143,7 @@ $(function() {
                 });
             });
         $(window).scroll(function() {
-                $('.markerContainer').css({
+                $('.markerContainer').stop().css({
                   top: ($(window).scrollTop()/solarTotalHeight)*100 + '%'
                   });
                 
@@ -315,7 +315,6 @@ $(function() {
         
         // controls/switches
         $('#toIntro').click(function(){
-                $(window).scrollTop(0);
                 $('.markerContainer').stop().animate({
                 top: '0%'
                 }, {
@@ -323,7 +322,8 @@ $(function() {
                 queue:false
                 });
                 resetPanels();
-                $('.lastSelected').removeClass('lastSelected');
+                $navli.removeClass('color').removeClass('lastSelected');
+                $(window).scrollTop(0)
                 
         })
         $('#freeScroll').click(function() {

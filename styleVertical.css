@@ -101,7 +101,7 @@ blockquote span.flare {
 .ruler {
 	width:25px;
 	position:fixed;
-	right:0;
+	right:.5%;
 	bottom:0;
 	height:90%;
 	margin-left:30px;
@@ -127,6 +127,7 @@ blockquote span.flare {
 	box-shadow: inset rgba(0, 0, 0, .7) 0px 0px 8px 0px;
 	border-left:1px solid #aaa;
 	border-top:1px solid #aaa;
+	border-right:1px solid #aaa;
 	border-radius:2px;
 }
 	.bgRuler .infoSmall {
@@ -258,21 +259,25 @@ section.intro .legend {
   ----------------*/
 .settings {
 	position:fixed;
-	right:5px;
-	top:75px;
+	right:10px;
+	top:70px;
 	z-index:200;
 }
 
 #toIntro {
 	box-sizing:border-box;
+	padding:2px 0 0 8px;
+	color:#fff;
 	width:20px;
 	height:20px;
-	padding:3px 0 0 8px;
-	color:#fff;
-	border-radius:2px;
+	border-radius:10px;
 	cursor:pointer;
-	background:#777;
 	opacity:.5;
+	background:#777;
+	box-shadow:inset rgba(0,0,0, .5) 0px 0px 5px 0px;
+	border-top:1px solid #aaa;
+	border-bottom:1px solid #ccc;
+
 }
 .switchOn {
 	opacity:1;
@@ -618,7 +623,7 @@ position:relative;
 	position:relative;
 }
 #sunAnchor.planetAnchor {
-top:2em !important;
+top:1.5em !important;
 }
 
 p {
@@ -802,7 +807,7 @@ to {
 }
 #jupiter {
 	width:102.7px;
-	height:102.7px;
+	height:96.05px;
 	border-radius:51.35px;
 	-moz-border-radius:51.35px;
 	background:#FC6;
