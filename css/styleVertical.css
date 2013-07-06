@@ -1,8 +1,8 @@
 @charset "UTF-8";
-/* CSS Document */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* 
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
 */
 html,
 body,
@@ -88,7 +88,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
@@ -144,22 +144,22 @@ strong {
 End Reset
 
 --------------------------*/
-section.intro h1 {
-  font-size: 4em;
-  text-shadow: rgba(255, 255, 255, 0.5) -1px -1px 1px;
-  color: #f7e9c8;
-}
-section.intro h2 {
-  font-size: 2em;
-  color: #f7e9c8;
-}
-section.intro {
+.intro {
   position: relative;
   margin-left: 15%;
   padding-top: 220px;
   width: 50em;
 }
-section.intro blockquote {
+.intro h1 {
+  font-size: 4em;
+  text-shadow: rgba(255, 255, 255, 0.5) -1px -1px 1px;
+  color: #f7e9c8;
+}
+.intro h2 {
+  font-size: 2em;
+  color: #f7e9c8;
+}
+.intro blockquote {
   margin: 1.5em 0;
   font-size: 2em;
   font-weight: 300;
@@ -190,24 +190,17 @@ section.intro blockquote {
   position: absolute;
   box-shadow: inset rgba(0, 0, 0, 0.5) 0px 0px 12px 0px;
   border: 1px solid #aaa;
-  /*border-top:1px solid #aaa;
-	border-right:1px solid #aaa;
-	border-radius:2px;*/
-
 }
 .bgRuler .infoSmall {
   position: fixed;
   top: 45%;
   right: 5em;
 }
-/* legend */
-section.intro .legend {
+.legend {
   font-family: arial;
   color: #666;
   background: rgba(175, 175, 175, 0.1);
   padding: 3em 3em 0 3em;
-  /*margin-left:-3em;*/
-
   display: inline-block;
   position: relative;
   box-shadow: inset rgba(0, 0, 0, 0.75) 0px 0px 12px 0px;
@@ -358,7 +351,7 @@ section.intro .legend {
   box-shadow: inset rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
   border: 1px solid #aaa;
   /*	border-top:1px solid #aaa;
-	border-bottom:1px solid #ccc;*/
+border-bottom:1px solid #ccc;*/
 
 }
 #toIntro a {
@@ -564,13 +557,9 @@ section.intro .legend {
 }
 .navList li {
   display: block;
-  float: left;
-  height: 50px;
   text-align: center;
   opacity: .5;
   background: #333;
-  border-left: 1px solid #333;
-  border-right: 1px solid #333;
   position: relative;
   overflow: hidden;
 }
@@ -633,14 +622,6 @@ section.intro .legend {
   background: transparent;
   position: relative;
   z-index: 0;
-  /* for non-css3 browsers */
-
-  /*background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000));  for webkit browsers */
-
-  /*background: -moz-linear-gradient(top, #111, #000);  for firefox 3.6+ */
-
-  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#111111', endColorstr='#000000');  for IE */
-
   padding-bottom: 500px;
 }
 .planet {
@@ -665,26 +646,6 @@ p {
   background-color: #999;
   text-shadow: 0 0 3px #999;
 }
-.star1 {
-  width: 1px;
-  height: 1px;
-  background: #fff;
-  position: absolute;
-  left: 100px;
-  top: 400px;
-}
-.star2 {
-  width: 2px;
-  height: 2px;
-}
-.star3 {
-  width: 3px;
-  height: 3px;
-}
-.star4 {
-  width: 4px;
-  height: 4px;
-}
 .moon {
   top: 50%;
 }
@@ -697,8 +658,6 @@ p {
   top: -29px;
   cursor: pointer;
   background: #eee;
-  /*opacity:.1;*/
-
   z-index: 100;
   opacity: 0;
 }
@@ -718,39 +677,24 @@ p {
   border-radius: 500px;
   -moz-border-radius: 500px;
   background: #ffd700;
-  /*box-shadow:0 0 21px #FF3;*/
-
   margin-top: 0;
   margin: 0 auto;
 }
 #mercury {
-  /*width:3.4px;
-	height:3.4px;*/
-
   width: 3.505316091954023px;
   height: 3.505316091954023px;
   border-radius: 1.752658045977011px;
   -moz-border-radius: 1.7px;
   background: #F93;
-  /*margin-top:25484px;*/
-
-  /*position:relative;*/
-
   margin-top: 41601.3649425287px;
 }
 #venus {
-  /*6,051.8 km mean radius*/
-
   width: 8.695114942528736px;
   height: 8.695114942528736px;
   border-radius: 4.347557471264368px;
   -moz-border-radius: 4.347557471264368px;
   background: #639;
-  /*margin-top:22058px;*/
-
   margin-top: 36134.9353448276px;
-  /*box-shadow:0 0 5px #C3C; 77736.3002873563*/
-
 }
 #earth {
   width: 9.153735632183908px;
@@ -758,13 +702,7 @@ p {
   border-radius: 4.576867816091954px;
   -moz-border-radius: 4.576867816091954px;
   background: #1F43B8;
-  /*background: -webkit-gradient(radial, 50% 25%, 0, 50% 50%, 4.55, from(#6E8FFA), to(#1F43B8)) #c00;*/
-
-  /*margin-top:18232px;*/
-
   margin-top: 29733.7147988506px;
-  /*box-shadow:0 0 5px #0ff; 107470.015086207 1 AU apprx 107470px*/
-
 }
 .ellipseTest {
   width: 582px;
@@ -791,36 +729,6 @@ p {
   left: 0px;
   top: -260.488505747127px;
 }
-/*#theMoon {
-		width:2.4843px;
-		height:2.4843px;
-		border-radius:1.24215px;
-		background:#fff;
-		position:absolute;
-		left:-260.466954022988506px; 
-	}*/
-/*#theMoon {
-		width:520.933908045977px;
-		height:520.933908045977px;
-		border-radius:1.24215px;
-		background:transparent;
-		position:absolute;
-		left:-260.466954022988506px;
-		top:-260.466954022988506px;
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 270s;  
-	}
-	#theMoon .moon {
-		width:2.49583333333333px;
-		height:2.49583333333333px;
-		border-radius:1.24215px;
-		background:#fff;
-		position:absolute;
-		left:0;
-		
-	}*/
 #mars {
   width: 4.8px;
   height: 4.8px;
@@ -846,28 +754,12 @@ p {
 }
 #jupiter {
   width: 102.7px;
-  height: 96.05px;
+  height: 102.7px;
   border-radius: 51.35px;
   -moz-border-radius: 51.35px;
-  background: #FC6;
-  /*margin-top:241999px;
-	background: -webkit-gradient(radial, 50% 0%, 0, 50% 50%, 51.35, from(blue), to(#eef)) #c00; 559301.149425287*/
-
   margin-top: 395551.795977011px;
+  background: #FC6;
 }
-/*	#io {
-		width:708.590804597701px;
-		height:708.590804597701px;
-		position:absolute;
-		left:-302.94540229885px;
-		top:-302.94540229885px;
-		background:transparent;
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 17.7s;
-		z-index:0;
-	}*/
 #io {
   width: 2.617097701149425px;
   height: 2.617097701149425px;
@@ -883,9 +775,6 @@ p {
   position: absolute;
   left: -482.0646551724138px;
   top: -482.0646551724138px;
-  /*background:#FC6;
-		opacity:.5;*/
-
   -webkit-animation-name: orbit;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -911,9 +800,6 @@ p {
   -webkit-animation-timing-function: linear;
   -webkit-animation-duration: 70.8s;
   z-index: 0;
-  /*background:#FC6;
-		opacity:.5;*/
-
 }
 #ganymede .moon {
   width: 3.780172413793103px;

@@ -1,20 +1,21 @@
-@import: 'mixins.less';
-@import: 'variables.less';
+@import: "mixins.less";
+@import: "variables.less";
 
 
 @charset "UTF-8";
-/* CSS Document */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+
+/* 
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 	box-sizing:border-box;
@@ -55,42 +56,38 @@ strong {
 End Reset
 
 --------------------------*/
-section.intro h1 {
-	font-size:4em;
-	text-shadow: rgba(255,255,255, .5) -1px -1px 1px;
-	color:rgba(247,233,200, 1);
-}
-section.intro h2 {
-	font-size:2em;
-	
-	color:rgba(247,233,200, 1);
-}
-section.intro {
+
+.intro {
 	position:relative;
 	margin-left:15%;
 	padding-top:220px;
 	width:50em;
-}
-
-section.intro blockquote {
-	margin:1.5em 0;	
-	font-size:2em;
-	font-weight:300;
-	font-style:normal;
-	color:#999;
-	width:20em;
-	line-height:1.33em;
-	letter-spacing:1px;
-	text-shadow: rgba(255,255,255, .3) -1px -1px 1px;
-	font-style:italic;
+	h1 {
+		font-size:4em;
+		text-shadow: rgba(255,255,255, .5) -1px -1px 1px;
+		color:rgba(247,233,200, 1);
+	}
+	h2 {
+		font-size:2em;	
+		color:rgba(247,233,200, 1);
+	}
+	blockquote {
+		margin:1.5em 0;	
+		font-size:2em;
+		font-weight:300;
+		font-style:normal;
+		color:#999;
+		width:20em;
+		line-height:1.33em;
+		letter-spacing:1px;
+		text-shadow: rgba(255,255,255, .3) -1px -1px 1px;
+		font-style:italic;
+	}
 }
 .byline {
 	display:block;
 	color:#ddd;
 	margin-top:.5em;
-}
-.bgStars {
-
 }
 .ruler {
 	width:20px;
@@ -99,54 +96,48 @@ section.intro blockquote {
 	bottom:1%;
 	height:90%;
 	z-index:100;
-}
-.ruler .bgRuler {
-
-	width:100%;
-	height:100%;
-	position:absolute;
-	box-shadow: inset rgba(0, 0, 0, .5) 0px 0px 12px 0px;
-	border:1px solid #aaa;
-	/*border-top:1px solid #aaa;
-	border-right:1px solid #aaa;
-	border-radius:2px;*/
-}
-	.bgRuler .infoSmall {
-		position:fixed;
-		top:45%;
-		right:5em;
+	.bgRuler {
+		width:100%;
+		height:100%;
+		position:absolute;
+		box-shadow: inset rgba(0, 0, 0, .5) 0px 0px 12px 0px;
+		border:1px solid #aaa;
 	}
-/* legend */
-section.intro .legend {
+}
+.bgRuler .infoSmall {
+	position:fixed;
+	top:45%;
+	right:5em;
+}
+.legend {
 	font-family:arial;
 	color:#666;
 	background: rgba(175, 175, 175, .1);
 	padding:3em 3em 0 3em;
-	/*margin-left:-3em;*/
 	display:inline-block;
 	position:relative;
 	box-shadow: inset rgba(0, 0, 0, .75) 0px 0px 12px 0px;
 	border:1px solid #222;
-}
-.legend label {
-	display:block;
-	position:absolute;
-	left:0;
-	top:0;
-	background: rgba(175, 175, 175, .1);
-	font-size:.66em;
-	font-family:kepler std;
-	font-weight:300;
-	text-transform:uppercase;
-	letter-spacing:.25em;
-	padding:.4em .70em;
-	color:#333;
+	label {
+		display:block;
+		position:absolute;
+		left:0;
+		top:0;
+		background: rgba(175, 175, 175, .1);
+		font-size:.66em;
+		font-family:kepler std;
+		font-weight:300;
+		text-transform:uppercase;
+		letter-spacing:.25em;
+		padding:.4em .70em;
+		color:#333;
+	}
 }
 .legendItem {
 	margin-bottom:2em;
-}
-.legendItem p {
-	font-size:.75em;
+	p {
+		font-size:.75em;
+	}
 }
 .onePx {
 	position:relative;
@@ -180,12 +171,12 @@ section.intro .legend {
 }
 
 /*Create the rulerGrids*/
-	.rulerGrid {
-		position:relative;
-		width:8px;
-		left:0;
-		border-bottom:1px solid #ccc;
-	}
+.rulerGrid {
+	position:relative;
+	width:8px;
+	left:0;
+	border-bottom:1px solid #ccc;
+}
 .markerContainer {
 	position:absolute;
 	top:0;
@@ -252,23 +243,23 @@ section.intro .legend {
   controls/switches
   
   ----------------*/
-.settings {
-	
-}
+  .settings {
 
-#toIntro {
-	position:fixed;
-	left:10px;
-	top:7%;
-	z-index:200;
-	cursor:pointer;
-	opacity:.3;
-	padding:.15em .5em;
-	background:#777;
-	box-shadow:inset rgba(0,0,0, .5) 0px 0px 10px 0px;
-	border:1px solid #aaa;
+  }
+
+  #toIntro {
+  	position:fixed;
+  	left:10px;
+  	top:7%;
+  	z-index:200;
+  	cursor:pointer;
+  	opacity:.3;
+  	padding:.15em .5em;
+  	background:#777;
+  	box-shadow:inset rgba(0,0,0, .5) 0px 0px 10px 0px;
+  	border:1px solid #aaa;
 /*	border-top:1px solid #aaa;
-	border-bottom:1px solid #ccc;*/
+border-bottom:1px solid #ccc;*/
 }
 #toIntro a {
 	color:#fff;
@@ -303,8 +294,8 @@ section.intro .legend {
 	box-sizing: border-box;
 	padding:.1em 0 0 .4em;
 	background:#fff;	
-    opacity: 0.5;	
-    cursor:pointer;	
+	opacity: 0.5;	
+	cursor:pointer;	
 }
 .card {
 	width:50em;
@@ -388,8 +379,8 @@ section.intro .legend {
 
 
 #wrapper {
-padding-top:100%;
-position:relative;
+	padding-top:100%;
+	position:relative;
 }
 
 
@@ -420,199 +411,163 @@ position:relative;
  Planet Nav -pn-
  
  ----------*/
-#goSun .ic32 {background-position: 0 -256px; }
-#goMercury .ic32 {background-position: 0 0;}
-#goVenus .ic32 {background-position: 0 -32px;}
-#goEarth .ic32 {background-position: 0 -64px;}
-#goMars .ic32 {background-position: 0 -96px;}
-#goJupiter .ic32 {background-position: 0 -128px;}
-#goSaturn .ic32 {background-position: 0 -160px;}
-#goUranus .ic32 {background-position: 0 -192px;}
-#goNeptune .ic32 {background-position: 0 -224px;}
+ #goSun .ic32 {background-position: 0 -256px; }
+ #goMercury .ic32 {background-position: 0 0;}
+ #goVenus .ic32 {background-position: 0 -32px;}
+ #goEarth .ic32 {background-position: 0 -64px;}
+ #goMars .ic32 {background-position: 0 -96px;}
+ #goJupiter .ic32 {background-position: 0 -128px;}
+ #goSaturn .ic32 {background-position: 0 -160px;}
+ #goUranus .ic32 {background-position: 0 -192px;}
+ #goNeptune .ic32 {background-position: 0 -224px;}
 
-#goSun .ic16 {background-position: -32px 0px; }
-#goMercury .ic16 {background-position:-32px -16px;}
-#goVenus .ic16 {background-position:-32px -32px;}
-#goEarth .ic16 {background-position:-32px -48px;}
-#goMars .ic16 {background-position:-32px -64px;}
-#goJupiter .ic16 {background-position:-32px -80px;}
-#goSaturn .ic16 {background-position:-32px -96px;}
-#goUranus .ic16 {background-position:-32px -112px;}
-#goNeptune .ic16 {background-position:-32px -128px;}
+ #goSun .ic16 {background-position: -32px 0px; }
+ #goMercury .ic16 {background-position:-32px -16px;}
+ #goVenus .ic16 {background-position:-32px -32px;}
+ #goEarth .ic16 {background-position:-32px -48px;}
+ #goMars .ic16 {background-position:-32px -64px;}
+ #goJupiter .ic16 {background-position:-32px -80px;}
+ #goSaturn .ic16 {background-position:-32px -96px;}
+ #goUranus .ic16 {background-position:-32px -112px;}
+ #goNeptune .ic16 {background-position:-32px -128px;}
 
 
-.nav {
-	position:fixed;
-	width:100%;
-	z-index:1;
-}
-.navList {
-	margin:0 auto;
-	width:100%;
-	li {
-		display:block;
-		float:left;
-		height:50px;
-		text-align:center;
-		opacity:.5;
-		background:#333;
-		border-left:1px solid #333;
-		border-right:1px solid #333;
-		position:relative;
-		overflow:hidden;
-	}
-	
-}
+ .nav {
+ 	position:fixed;
+ 	width:100%;
+ 	z-index:1;
+ }
+ .navList {
+ 	margin:0 auto;
+ 	width:100%;
+ 	li {
+ 		display:block;
+ 		text-align:center;
+ 		opacity:.5;
+ 		background:#333;
+ 		position:relative;
+ 		overflow:hidden;
+ 	}
 
-.navList .ic16 {
-	display:none;
-}
-.navList li.sun,
-.navList li.me,
-.navList li.v,
-.navList li.e,
-.navList li.ma, 
-.navList li.j, 
-.navList li.s,
-.navList li.u,
-.navList li.n {
-	border-bottom:8px solid #333;	
-}
-.navList li.sun.color  {border-bottom-color: #ffd700;}
-.navList li.me.color  {border-bottom-color: #F93;}
-.navList li.v.color  {border-bottom-color: #639;}
-.navList li.e.color  {border-bottom-color: #1F43B8;}
-.navList li.ma.color  {border-bottom-color: #c00;}
-.navList li.j.color  {border-bottom-color: #FC6;}
-.navList li.s.color  {border-bottom-color: #cf6;}
-.navList li.u.color  {border-bottom-color: #6ff;}
-.navList li.n.color  {border-bottom-color: #699;}
+ }
+
+ .navList .ic16 {
+ 	display:none;
+ }
+ .navList li.sun,
+ .navList li.me,
+ .navList li.v,
+ .navList li.e,
+ .navList li.ma, 
+ .navList li.j, 
+ .navList li.s,
+ .navList li.u,
+ .navList li.n {
+ 	border-bottom:8px solid #333;	
+ }
+ .navList li.sun.color  {border-bottom-color: #ffd700;}
+ .navList li.me.color  {border-bottom-color: #F93;}
+ .navList li.v.color  {border-bottom-color: #639;}
+ .navList li.e.color  {border-bottom-color: #1F43B8;}
+ .navList li.ma.color  {border-bottom-color: #c00;}
+ .navList li.j.color  {border-bottom-color: #FC6;}
+ .navList li.s.color  {border-bottom-color: #cf6;}
+ .navList li.u.color  {border-bottom-color: #6ff;}
+ .navList li.n.color  {border-bottom-color: #699;}
 
 /*-------------------
  
  Dwarf Nav -dfn-
  
  ----------*/
-.dwarfList, #showDwarf  {
-	display:none;
-}
+ .dwarfList, #showDwarf  {
+ 	display:none;
+ }
 /*-------------------
  
  Planets -p- (heavenly bodies)
  
  ----------*/
 
-#planetContainer {
-	background:transparent;
-	position:relative;
-	z-index:0;
-	 /* for non-css3 browsers */
-	/*background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000));  for webkit browsers */
-	/*background: -moz-linear-gradient(top, #111, #000);  for firefox 3.6+ */
- 	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#111111', endColorstr='#000000');  for IE */
-	padding-bottom:500px;
-}
-.planet {
-	margin-left:auto;
-	margin-right:auto;
-	position: relative;
-}
-.planetAnchor {
-	position:relative;
-}
-#sunAnchor.planetAnchor {
-top:1.5em !important;
-}
+ #planetContainer {
+ 	background:transparent;
+ 	position:relative;
+ 	z-index:0;
+ 	padding-bottom:500px;
+ }
+ .planet {
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	position: relative;
+ }
+ .planetAnchor {
+ 	position:relative;
+ }
+ #sunAnchor.planetAnchor {
+ 	top:1.5em !important;
+ }
 
-p {
-	line-height:1.68em;
-}
-.bright {
-	background-color:#fff;
-	text-shadow:0 0 3px #fff;
-}
-.dim {
-	background-color:#999;
-	text-shadow:0 0 3px #999;
-}
-.star1 {
-width:1px;
-height:1px;
-background:#fff;
-position:absolute;
-left:100px;
-top:400px;
-}
-
-.star2 {
-width:2px;
-height:2px;
-}
-.star3 {
-width:3px;
-height:3px;
-}
-.star4 {
-width:4px;
-height:4px;
-}
-.moon {
-	top:50%;
-}
-.info {
-	width:60px;
-	height:60px;
-	border-radius:0.548491379310345px;
-	position:absolute;
-	left:-29px;
-	top:-29px;
-	cursor:pointer;
-	background:#eee;
-	/*opacity:.1;*/
-	z-index:100;
-	opacity:0;
-}
-/* webkit animation */
-@-webkit-keyframes orbit {  
-from {  
-    -webkit-transform: rotate(0deg);  
-}  
-to {  
-    -webkit-transform: rotate(-360deg);  
-    }  
-}
-/* keep the rotating containers on level 0 */
-#sun {
-	width:1000px;
-	height:1000px;
-	border-radius:500px;
-	-moz-border-radius:500px;
-	background:#ffd700;
-	/*box-shadow:0 0 21px #FF3;*/
-	margin-top:0;
-	margin:0 auto;
-}
-#mercury {
-	/*width:3.4px;
-	height:3.4px;*/
+ p {
+ 	line-height:1.68em;
+ }
+ .bright {
+ 	background-color:#fff;
+ 	text-shadow:0 0 3px #fff;
+ }
+ .dim {
+ 	background-color:#999;
+ 	text-shadow:0 0 3px #999;
+ }
+ .moon {
+ 	top:50%;
+ }
+ .info {
+ 	width:60px;
+ 	height:60px;
+ 	border-radius:0.548491379310345px;
+ 	position:absolute;
+ 	left:-29px;
+ 	top:-29px;
+ 	cursor:pointer;
+ 	background:#eee;
+ 	z-index:100;
+ 	opacity:0;
+ }
+ /* webkit animation */
+ @-webkit-keyframes orbit {  
+ 	from {  
+ 		-webkit-transform: rotate(0deg);  
+ 	}  
+ 	to {  
+ 		-webkit-transform: rotate(-360deg);  
+ 	}  
+ }
+ /* keep the rotating containers on level 0 */
+ #sun {
+ 	/*width:1000px;
+ 	height:1000px;*/
+ 	.square(100rem);
+ 	border-radius:500px;
+ 	-moz-border-radius:500px;
+ 	background:#ffd700;
+ 	margin-top:0;
+ 	margin:0 auto;
+ }
+ #mercury {
 	width:3.505316091954023px;
 	height:3.505316091954023px;
 	border-radius:1.752658045977011px;
 	-moz-border-radius:1.7px;
 	background:#F93;
-	/*margin-top:25484px;*/
-	/*position:relative;*/
 	margin-top:41601.3649425287px;
 }
-#venus { /*6,051.8 km mean radius*/
+#venus { 
 	width:8.695114942528736px;
 	height:8.695114942528736px;
 	border-radius:4.347557471264368px;
 	-moz-border-radius:4.347557471264368px;
 	background:#639;
-	/*margin-top:22058px;*/
 	margin-top:36134.9353448276px;
-	/*box-shadow:0 0 5px #C3C; 77736.3002873563*/
 }
 #earth {
 	width:9.153735632183908px;
@@ -620,11 +575,7 @@ to {
 	border-radius:4.576867816091954px;
 	-moz-border-radius:4.576867816091954px;
 	background:#1F43B8;
-	/*background: -webkit-gradient(radial, 50% 25%, 0, 50% 50%, 4.55, from(#6E8FFA), to(#1F43B8)) #c00;*/
-	/*margin-top:18232px;*/
-	margin-top:29733.7147988506px;
-	/*box-shadow:0 0 5px #0ff; 107470.015086207 1 AU apprx 107470px*/
-	
+	margin-top:29733.7147988506px;	
 }
 .ellipseTest {
 	width:582px;
@@ -644,44 +595,14 @@ to {
 	background:url(images/sprite.png) no-repeat 0 20px;
 }
 #theMoon {
-		width:2.49583333333333px;
-		height:2.49583333333333px;
-		border-radius:1.24215px;
-		background:#fff;
-		position:absolute;
-		left:0px;
-		top:-260.488505747127px;
+	width:2.49583333333333px;
+	height:2.49583333333333px;
+	border-radius:1.24215px;
+	background:#fff;
+	position:absolute;
+	left:0px;
+	top:-260.488505747127px;
 }
-	/*#theMoon {
-		width:2.4843px;
-		height:2.4843px;
-		border-radius:1.24215px;
-		background:#fff;
-		position:absolute;
-		left:-260.466954022988506px; 
-	}*/
-	/*#theMoon {
-		width:520.933908045977px;
-		height:520.933908045977px;
-		border-radius:1.24215px;
-		background:transparent;
-		position:absolute;
-		left:-260.466954022988506px;
-		top:-260.466954022988506px;
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 270s;  
-	}
-	#theMoon .moon {
-		width:2.49583333333333px;
-		height:2.49583333333333px;
-		border-radius:1.24215px;
-		background:#fff;
-		position:absolute;
-		left:0;
-		
-	}*/
 #mars {
 	width:4.8px;
 	height:4.8px;
@@ -705,89 +626,72 @@ to {
 }
 #jupiter {
 	width:102.7px;
-	height:96.05px;
+	height:102.7px;
 	border-radius:51.35px;
 	-moz-border-radius:51.35px;
-	background:#FC6;
-	/*margin-top:241999px;
-	background: -webkit-gradient(radial, 50% 0%, 0, 50% 50%, 51.35, from(blue), to(#eef)) #c00; 559301.149425287*/
 	margin-top:395551.795977011px;
+	background:#FC6;
+
 }
-/*	#io {
-		width:708.590804597701px;
-		height:708.590804597701px;
-		position:absolute;
-		left:-302.94540229885px;
-		top:-302.94540229885px;
-		background:transparent;
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 17.7s;
-		z-index:0;
-	}*/
-		#io  {
-			width:2.617097701149425px;
-			height:2.617097701149425px;
-			border-radius:1.308548850574713px;
-			position:absolute;
-			left:0px;
-			top:-301.724137931034px;
-			background:#FC6;
-		}
-	#europa {
-		width:1066.82931034483px;
-		height:1066.82931034483px;
-		position:absolute;
-		left:-482.064655172413793px;
-		top:-482.064655172413793px;
-		/*background:#FC6;
-		opacity:.5;*/
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 35.4s;
-		z-index:0;
-	}
-		#europa .moon {
-			width:2.242816091954023px;
-			height:2.242816091954023px;
-			border-radius:1.121408045977011px;
-			position:absolute;
-			left:0;
-			background:#FC6;
-		}
-	#ganymede {
-		width:1640.64827586207px;
-		height:1640.64827586207px;
-		position:absolute;
-		left:-768.974137931034483px;
-		top:-768.974137931034483px;
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 70.8s;
-		z-index:0;
-		/*background:#FC6;
-		opacity:.5;*/
-	}
-		#ganymede .moon {
-			width:3.780172413793103px;
-			height:3.780172413793103px;
-			border-radius:1.890086206896552px;
-			position:absolute;
-			left:0px;
-			background:#FC6;
-			
-		}
-	#callisto {
-		width:3.463362068965517px;
-		height:3.463362068965517px;
-		border-radius:1.731681034482759px;
-		position:absolute;
-		left:-1352.520833333333333px;
-		background:#FC6;
-	}
+
+#io  {
+	width:2.617097701149425px;
+	height:2.617097701149425px;
+	border-radius:1.308548850574713px;
+	position:absolute;
+	left:0px;
+	top:-301.724137931034px;
+	background:#FC6;
+}
+#europa {
+	width:1066.82931034483px;
+	height:1066.82931034483px;
+	position:absolute;
+	left:-482.064655172413793px;
+	top:-482.064655172413793px;
+	-webkit-animation-name: orbit;  
+	-webkit-animation-iteration-count: infinite;  
+	-webkit-animation-timing-function: linear;  
+	-webkit-animation-duration: 35.4s;
+	z-index:0;
+}
+#europa .moon {
+	width:2.242816091954023px;
+	height:2.242816091954023px;
+	border-radius:1.121408045977011px;
+	position:absolute;
+	left:0;
+	background:#FC6;
+}
+#ganymede {
+	width:1640.64827586207px;
+	height:1640.64827586207px;
+	position:absolute;
+	left:-768.974137931034483px;
+	top:-768.974137931034483px;
+	-webkit-animation-name: orbit;  
+	-webkit-animation-iteration-count: infinite;  
+	-webkit-animation-timing-function: linear;  
+	-webkit-animation-duration: 70.8s;
+	z-index:0;
+}
+#ganymede .moon {
+	width:3.780172413793103px;
+	height:3.780172413793103px;
+	border-radius:1.890086206896552px;
+	position:absolute;
+	left:0px;
+	background:#FC6;
+
+}
+#callisto {
+	width:3.463362068965517px;
+	height:3.463362068965517px;
+	border-radius:1.731681034482759px;
+	position:absolute;
+	left:-1352.520833333333333px;
+	background:#FC6;
+}
 #saturn {
 	width:83.6px;
 	height:83.6px;
@@ -797,29 +701,29 @@ to {
 	/*margin-top:285342px; 1029776.84626437*/
 	margin-top:470475.696839081px;
 }
-	#titan {
-		width:3.699712643678161px;
-		height:3.699712643678161px;
-		border-radius:1.84985632183908px;
-		position:absolute;
-		left:-877.780172413793103px;
-		background:#FC6;
-	}
-	#titan {
-		width:3.699712643678161px;
-		height:3.699712643678161px;
-		border-radius:1.84985632183908px;
-		position:absolute;
-		left:-877.780172413793103px;
-		background:#FC6;
-	}
-	#rhea {
-		width:757.33908045977px;
-		height:757.33908045977px;
-		border-radius:0.548491379310345px;
-		position:absolute;
-		left:-336.869540229885px;
-		top:-336.869540229885px;
+#titan {
+	width:3.699712643678161px;
+	height:3.699712643678161px;
+	border-radius:1.84985632183908px;
+	position:absolute;
+	left:-877.780172413793103px;
+	background:#FC6;
+}
+#titan {
+	width:3.699712643678161px;
+	height:3.699712643678161px;
+	border-radius:1.84985632183908px;
+	position:absolute;
+	left:-877.780172413793103px;
+	background:#FC6;
+}
+#rhea {
+	width:757.33908045977px;
+	height:757.33908045977px;
+	border-radius:0.548491379310345px;
+	position:absolute;
+	left:-336.869540229885px;
+	top:-336.869540229885px;
 		/*background:#FC6;
 		opacity:.5;*/
 		-webkit-animation-name: orbit;  
@@ -827,16 +731,16 @@ to {
 		-webkit-animation-timing-function: linear;  
 		-webkit-animation-duration: 70.8s;
 	}
-		#rhea .moon {
-			width:1.09698275862069px;
-			height:1.09698275862069px;
-			border-radius:0.548491379310345px;
-			position:absolute;
-			left:0;
-			background:#FC6;
-			
-		}
-		
+	#rhea .moon {
+		width:1.09698275862069px;
+		height:1.09698275862069px;
+		border-radius:0.548491379310345px;
+		position:absolute;
+		left:0;
+		background:#FC6;
+
+	}
+
 	
 	/* saturn's rings */
 	#saturnCopy {
@@ -889,53 +793,53 @@ to {
 		left:-56.7px;
 		top:-56.7px;
 	}
-#uranus {
-	width:32.6px;
-	height:32.6px;
-	border-radius:16.35px;
-	-moz-border-radius:16.3px;
-	background:#6FF;
-	margin-top:1036063.17180584px;
-	/* semi-major axis 2065840.018070218*/
-}
-
-#neptune {
-	width:33.7px;
-	height:33.7px;
-	border-radius:16.85px;
-	-moz-border-radius:16.85px;
-	background:#699;
-	/*semi-major axis 3235232.51508621*/
-	margin-top:1169392.49701599px;
-}
-	#triton {
-	   width:254.855603448276px; /* from the center of Neptune */
-	   height:254.855603448276px;
-	   
+	#uranus {
+		width:32.6px;
+		height:32.6px;
+		border-radius:16.35px;
+		-moz-border-radius:16.3px;
+		background:#6FF;
+		margin-top:1036063.17180584px;
+		/* semi-major axis 2065840.018070218*/
 	}
-	   #triton .moon {
-		   width:1.94454022988506px;
-		   height:1.94454022988506px;
-		   
-		   
-	   }
-#pluto {
-	width:1px;
-	height:1px;
-	background:#ccc;
-	margin-top:984595.07112069px;
-	/*4219827.5862069*/
-	display:none;
-	/*move this to dwarf*/
-}
+
+	#neptune {
+		width:33.7px;
+		height:33.7px;
+		border-radius:16.85px;
+		-moz-border-radius:16.85px;
+		background:#699;
+		/*semi-major axis 3235232.51508621*/
+		margin-top:1169392.49701599px;
+	}
+	#triton {
+		width:254.855603448276px; /* from the center of Neptune */
+		height:254.855603448276px;
+
+	}
+	#triton .moon {
+		width:1.94454022988506px;
+		height:1.94454022988506px;
 
 
-.typekit-badge {
-	position:fixed;
-	left:0 !important;
-	bottom:0;
-	opacity:.1;
-}
+	}
+	#pluto {
+		width:1px;
+		height:1px;
+		background:#ccc;
+		margin-top:984595.07112069px;
+		/*4219827.5862069*/
+		display:none;
+		/*move this to dwarf*/
+	}
+
+
+	.typekit-badge {
+		position:fixed;
+		left:0 !important;
+		bottom:0;
+		opacity:.1;
+	}
 
 /* ---------------------
   
