@@ -1,49 +1,142 @@
 @charset "UTF-8";
 /* CSS Document */
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
-	background:#000;
-	font-weight:300;
-	font-style:normal;
+  line-height: 1;
+  background: #000;
+  font-weight: 300;
+  font-style: normal;
 }
 section {
-	color:#fff;
+  color: #fff;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 strong {
-	font-weight:normal;
-	color:#ddd;
+  font-weight: normal;
+  color: #ddd;
 }
 /* ----------------------
 
@@ -51,514 +144,562 @@ End Reset
 
 --------------------------*/
 section.intro h1 {
-	font-size:4em;
-	text-shadow: rgba(255,255,255, .5) -1px -1px 1px;
-	color:rgba(247,233,200, 1);
+  font-size: 4em;
+  text-shadow: rgba(255, 255, 255, 0.5) -1px -1px 1px;
+  color: #f7e9c8;
 }
 section.intro h2 {
-	font-size:2em;
-	
-	color:rgba(247,233,200, 1);
+  font-size: 2em;
+  color: #f7e9c8;
 }
 section.intro {
-	position:relative;
-	margin-left:15%;
-	padding-top:220px;
-	width:50em;
+  position: relative;
+  margin-left: 15%;
+  padding-top: 220px;
+  width: 50em;
 }
-
 section.intro blockquote {
-	margin:1.5em 0;	
-	font-size:2em;
-	font-weight:300;
-	font-style:normal;
-	color:#999;
-	width:20em;
-	line-height:1.33em;
-	letter-spacing:1px;
-	text-shadow: rgba(255,255,255, .3) -1px -1px 1px;
-	font-style:italic;
+  margin: 1.5em 0;
+  font-size: 2em;
+  font-weight: 300;
+  font-style: normal;
+  color: #999;
+  width: 20em;
+  line-height: 1.33em;
+  letter-spacing: 1px;
+  text-shadow: rgba(255, 255, 255, 0.3) -1px -1px 1px;
+  font-style: italic;
 }
 .byline {
-	display:block;
-	color:#ddd;
-	margin-top:.5em;
-}
-section.intro blockquote {
-	
-
-	
+  display: block;
+  color: #ddd;
+  margin-top: .5em;
 }
 blockquote span.flare {
-	display:inline-block;
-	/*position:relative;
+  display: inline-block;
+  /*position:relative;
 	right:1em;
 	font-size:5em;
 	font-family:arial;*/
+
 }
 .bgStars {
-	/*background-image:url(images/bgBody.jpg);*/
-	background-color:transparent;
-	background-position: 0px 0px;
-	background-repeat:repeat-y;
-	width:100%;
-	height:300%;
-	position:fixed;
-	display:none;
+  /*background-image:url(images/bgBody.jpg);*/
+
+  background-color: transparent;
+  background-position: 0px 0px;
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 300%;
+  position: fixed;
+  display: none;
 }
 .ruler {
-	width:20px;
-	position:fixed;
-	right:1%;
-	bottom:1%;
-	height:90%;
-	margin-left:30px;
-	 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    /* This works in IE 8 & 9 too */
-    /* ... but also 5, 6, 7 */
-    filter: alpha(opacity=50);
-    /* Older than Firefox 0.9 */
-    -moz-opacity:0.5;
-    /* Safari 1.x (pre WebKit!) */
-    -khtml-opacity: 0.5;
-    /* Modern!
+  width: 20px;
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  height: 90%;
+  margin-left: 30px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* This works in IE 8 & 9 too */
+
+  /* ... but also 5, 6, 7 */
+
+  filter: alpha(opacity=50);
+  /* Older than Firefox 0.9 */
+
+  -moz-opacity: 0.5;
+  /* Safari 1.x (pre WebKit!) */
+
+  -khtml-opacity: 0.5;
+  /* Modern!
     /* Firefox 0.9+, Safari 2?, Chrome any?
     /* Opera 9+, IE 9+ */
-    opacity: 1;
-	z-index:100;
+
+  opacity: 1;
+  z-index: 100;
 }
 .ruler .bgRuler {
-
-	width:100%;
-	height:100%;
-	position:absolute;
-	box-shadow: inset rgba(0, 0, 0, .5) 0px 0px 12px 0px;
-	border:1px solid #aaa;
-	/*border-top:1px solid #aaa;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0px 0px 12px 0px;
+  border: 1px solid #aaa;
+  /*border-top:1px solid #aaa;
 	border-right:1px solid #aaa;
 	border-radius:2px;*/
+
 }
-	.bgRuler .infoSmall {
-		position:fixed;
-		top:45%;
-		right:5em;
-	}
+.bgRuler .infoSmall {
+  position: fixed;
+  top: 45%;
+  right: 5em;
+}
 /* legend */
 section.intro .legend {
-	font-family:arial;
-	color:#666;
-	background: rgba(175, 175, 175, .1);
-	padding:3em 3em 0 3em;
-	/*margin-left:-3em;*/
-	display:inline-block;
-	position:relative;
-	box-shadow: inset rgba(0, 0, 0, .75) 0px 0px 12px 0px;
-	border:1px solid #222;
+  font-family: arial;
+  color: #666;
+  background: rgba(175, 175, 175, 0.1);
+  padding: 3em 3em 0 3em;
+  /*margin-left:-3em;*/
+
+  display: inline-block;
+  position: relative;
+  box-shadow: inset rgba(0, 0, 0, 0.75) 0px 0px 12px 0px;
+  border: 1px solid #222;
 }
 .legend label {
-	display:block;
-	position:absolute;
-	left:0;
-	top:0;
-	background: rgba(175, 175, 175, .1);
-	font-size:.66em;
-	font-family:kepler std;
-	font-weight:300;
-	text-transform:uppercase;
-	letter-spacing:.25em;
-	padding:.4em .70em;
-	color:#333;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(175, 175, 175, 0.1);
+  font-size: .66em;
+  font-family: kepler std;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  padding: .4em .70em;
+  color: #333;
 }
 .legendItem {
-	margin-bottom:2em;
+  margin-bottom: 2em;
 }
 .legendItem p {
-	font-size:.75em;
+  font-size: .75em;
 }
 .onePx {
-	position:relative;
-	left:10px;
-	
+  position: relative;
+  left: 10px;
 }
 .onePx sup {
-	font-size:.5em;
-	position:relative;
-	bottom:.5em;
+  font-size: .5em;
+  position: relative;
+  bottom: .5em;
 }
 .pixel {
-	background:#fff;
-	width:1px;
-	height:1px;
-	position:relative;
-	top:10px;
+  background: #fff;
+  width: 1px;
+  height: 1px;
+  position: relative;
+  top: 10px;
 }
 #au {
-	float:left;
-	width:5px;
-	border-left:1px solid #666;
-	border-top:1px solid #666;
-	border-bottom:1px solid #666;
-	opacity:1;
+  float: left;
+  width: 5px;
+  border-left: 1px solid #666;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  opacity: 1;
 }
 .auDef {
-	position:relative;
-	left:5px;
-	top:5px;
+  position: relative;
+  left: 5px;
+  top: 5px;
 }
-
 /*Create the rulerGrids*/
-	.rulerGrid {
-		position:relative;
-		width:8px;
-		left:0;
-		border-bottom:1px solid #ccc;
-	}
+.rulerGrid {
+  position: relative;
+  width: 8px;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+}
 .markerContainer {
-	position:absolute;
-	top:0;
-	margin-top:-4px;
-	left:-7px;
-	width:10px;
-	height:10px;
-	overflow:hidden;
+  position: absolute;
+  top: 0;
+  margin-top: -4px;
+  left: -7px;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
 }
 #marker {
-	opacity:.75;
-	transform:rotate(45deg);
-	-webkit-transform:rotate(45deg);
-	width:10px;
-	height:10px;
-	
-	position:absolute;
-	top:0;
-	left:-6px;
-	z-index:101;
-	background:#10597e;
-	background:rgba(247,233,200, 1);
-
-
+  opacity: .75;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: -6px;
+  z-index: 101;
+  background: #10597e;
+  background: #f7e9c8;
 }
-
 /* counter */
 .counter {
-	color:#666;
-	position:absolute;
-	top:-5px;
-	right:50px;
-	font-family:sans-serif;
-	font-size:.66em;
-	letter-spacing:1px;
-	white-space:nowrap;
-	
+  color: #666;
+  position: absolute;
+  top: -5px;
+  right: 50px;
+  font-family: sans-serif;
+  font-size: .66em;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
-.sunGlow {box-shadow:0px 0px 10px #ffd700;}
-.meGlow {box-shadow:0px 0px 10px #F93;}
-.vGlow {box-shadow:0px 0px 10px #639;}
-.eGlow {box-shadow:0px 0px 10px  #1F43B8;}
-.maGlow {box-shadow:0px 0px 10px  #c00;}
-.jGlow {box-shadow:0px 0px 10px  #FC6;}
-.sGlow {box-shadow:0px 0px 10px  #cf6;}
-.uGlow {box-shadow:0px 0px 10px  #6ff;}
-.nGlow {box-shadow:0px 0px 10px  #699;}
-
+.sunGlow {
+  box-shadow: 0px 0px 10px #ffd700;
+}
+.meGlow {
+  box-shadow: 0px 0px 10px #F93;
+}
+.vGlow {
+  box-shadow: 0px 0px 10px #639;
+}
+.eGlow {
+  box-shadow: 0px 0px 10px  #1F43B8;
+}
+.maGlow {
+  box-shadow: 0px 0px 10px  #c00;
+}
+.jGlow {
+  box-shadow: 0px 0px 10px  #FC6;
+}
+.sGlow {
+  box-shadow: 0px 0px 10px  #cf6;
+}
+.uGlow {
+  box-shadow: 0px 0px 10px  #6ff;
+}
+.nGlow {
+  box-shadow: 0px 0px 10px  #699;
+}
 #moveMarker {
-	width:20px;
-	height:20px;
-	background-color:#eee;
-	cursor:pointer;
-	position:absolute;
-	right:0;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
 }
 #mercuryMarker {
-	position:absolute;
-	top:1.2%;
+  position: absolute;
+  top: 1.2%;
 }
-
 /* ------------------
   
   controls/switches
   
   ----------------*/
-.settings {
-	
-}
-
 #toIntro {
-	position:fixed;
-	left:10px;
-	top:7%;
-	z-index:200;
-	cursor:pointer;
-	opacity:.3;
-	padding:.15em .5em;
-	background:#777;
-	box-shadow:inset rgba(0,0,0, .5) 0px 0px 10px 0px;
-	border:1px solid #aaa;
-/*	border-top:1px solid #aaa;
+  position: fixed;
+  left: 10px;
+  top: 7%;
+  z-index: 200;
+  cursor: pointer;
+  opacity: .3;
+  padding: .15em .5em;
+  background: #777;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+  border: 1px solid #aaa;
+  /*	border-top:1px solid #aaa;
 	border-bottom:1px solid #ccc;*/
+
 }
 #toIntro a {
-	color:#fff;
-	font-size:.5em;
-	font-family:sans-serif;
-	text-transform:uppercase;
-	text-decoration:none;
-	letter-spacing:.25em;
-	position:relative;
-	bottom:1px;
-	
+  color: #fff;
+  font-size: .5em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .25em;
+  position: relative;
+  bottom: 1px;
 }
 .switchOn {
-	opacity:1;
-	box-shadow: rgba(255, 255, 255, .7) 0 0 10px 0;
+  opacity: 1;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 0 10px 0;
 }
-
 #showDwarf {
-	position:absolute;
+  position: absolute;
 }
-
 #freeScroll {
-	display:none;
-}
-.freeScroll {
-	
+  display: none;
 }
 .toggleCard {
-	width:1em;
-	height:1em;
-	border-radius: .5em;
-	box-sizing: border-box;
-	padding:.1em 0 0 .4em;
-	background:#fff;
-	position:fixed;
-	bottom:1em;
-	right:1em;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    /* This works in IE 8 & 9 too */
-    /* ... but also 5, 6, 7 */
-    filter: alpha(opacity=50);
+  width: 1em;
+  height: 1em;
+  border-radius: .5em;
+  box-sizing: border-box;
+  padding: .1em 0 0 .4em;
+  background: #fff;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* This works in IE 8 & 9 too */
 
-    /* Older than Firefox 0.9 */
-    -moz-opacity:0.5;
+  /* ... but also 5, 6, 7 */
 
-    /* Safari 1.x (pre WebKit!) */
-    -khtml-opacity: 0.5;
+  filter: alpha(opacity=50);
+  /* Older than Firefox 0.9 */
 
-    /* Modern!
+  -moz-opacity: 0.5;
+  /* Safari 1.x (pre WebKit!) */
+
+  -khtml-opacity: 0.5;
+  /* Modern!
     /* Firefox 0.9+, Safari 2?, Chrome any?
     /* Opera 9+, IE 9+ */
-    opacity: 0.5;	
-    cursor:pointer;	
+
+  opacity: 0.5;
+  cursor: pointer;
 }
 .card {
-	width:50em;
-	padding:1em;
-	overflow:auto;
-	position:absolute;
-	left:-175%;
-	top:150%;
-	opacity:.5;
-	color:#999;
-	font-size:.75em;
-	display:none;
+  width: 50em;
+  padding: 1em;
+  overflow: auto;
+  position: absolute;
+  left: -175%;
+  top: 150%;
+  opacity: .5;
+  color: #999;
+  font-size: .75em;
+  display: none;
 }
-
 /* panels general -pg- */
 .tip {
-	background:#222;
-	padding:.25em 1em;
-	text-shadow: rgba(0,0,0, 1) 0px 0px 2px;
-	font-family:arial;
-	color:#666;
-	display:inline-block;
-	margin-top:1.5em;
+  background: #222;
+  padding: .25em 1em;
+  text-shadow: #000000 0px 0px 2px;
+  font-family: arial;
+  color: #666;
+  display: inline-block;
+  margin-top: 1.5em;
 }
 .tip p {
-	z-index:200;
+  z-index: 200;
 }
 .arrowUp {
-	transform:rotate(45deg);
-	-webkit-transform:rotate(45deg);
-	width:18px;
-	height:18px;
-	background:#222;
-	position:absolute;
-	top:-8px;
-	z-index:0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 18px;
+  height: 18px;
+  background: #222;
+  position: absolute;
+  top: -8px;
+  z-index: 0;
 }
 #tipNav {
-	left:-10em;
-	top:100px;
+  left: -10em;
+  top: 100px;
 }
 .infoPanel {
-	background:#777;
-	opacity:.3;
-	color:#fff;
-	text-shadow:0 0 8px #555;
-	z-index:100;
+  background: #777;
+  opacity: .3;
+  color: #fff;
+  text-shadow: 0 0 8px #555;
+  z-index: 100;
 }
 .infoPanel button {
-	display:block;
-	text-indent:-9999px;
-	position:absolute;
-	top:-.5em;
-	right:-.5em;
-	width:1em;
-	height:.2em;
-	background:#eee;
-	opacity:0;
-	border:0;
+  display: block;
+  text-indent: -9999px;
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  width: 1em;
+  height: .2em;
+  background: #eee;
+  opacity: 0;
+  border: 0;
 }
 #mainInfo {
-	color:#fff;
-	position:fixed;
-	bottom:0px;
-	right:35%;
-	height:5%;
-	width:30%;
-	background:#333;
-	opacity:.3;
-	font-size:.75em;
-	z-index:1000;
-	display:none;
+  color: #fff;
+  position: fixed;
+  bottom: 0px;
+  right: 35%;
+  height: 5%;
+  width: 30%;
+  background: #333;
+  opacity: .3;
+  font-size: .75em;
+  z-index: 1000;
+  display: none;
 }
 #mainInfo a {
-	color:#fff;
-	text-decoration:none;
+  color: #fff;
+  text-decoration: none;
 }
 .button {
-	cursor:pointer;
+  cursor: pointer;
 }
-
-
 #wrapper {
-padding-top:100%;
-position:relative;
+  padding-top: 100%;
+  position: relative;
 }
-
-
 /* images icons */
 .ic32 {
-	width:32px;
-	height:32px;
-	background-image: url(images/iconSheet.png);
-	background-repeat: no-repeat;
-	display:inline-block;
-	position: absolute;
-	bottom:.5em;
-	left:1.5em;	
+  width: 32px;
+  height: 32px;
+  background-image: url(images/iconSheet.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  bottom: .5em;
+  left: 1.5em;
 }
 .ic16 {
-	width:16px;
-	height:16px;
-	background-image: url(images/iconSheet.png);
-	background-repeat: no-repeat;
-	display:inline-block;
-	position: absolute;
-	bottom:1em;
-	left:1.5em;	
+  width: 16px;
+  height: 16px;
+  background-image: url(images/iconSheet.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  bottom: 1em;
+  left: 1.5em;
 }
-
- /*-------------------
+/*-------------------
  
  Planet Nav -pn-
  
  ----------*/
-#goSun .ic32 {background-position: 0 -256px; }
-#goMercury .ic32 {background-position: 0 0;}
-#goVenus .ic32 {background-position: 0 -32px;}
-#goEarth .ic32 {background-position: 0 -64px;}
-#goMars .ic32 {background-position: 0 -96px;}
-#goJupiter .ic32 {background-position: 0 -128px;}
-#goSaturn .ic32 {background-position: 0 -160px;}
-#goUranus .ic32 {background-position: 0 -192px;}
-#goNeptune .ic32 {background-position: 0 -224px;}
-
-#goSun .ic16 {background-position: -32px 0px; }
-#goMercury .ic16 {background-position:-32px -16px;}
-#goVenus .ic16 {background-position:-32px -32px;}
-#goEarth .ic16 {background-position:-32px -48px;}
-#goMars .ic16 {background-position:-32px -64px;}
-#goJupiter .ic16 {background-position:-32px -80px;}
-#goSaturn .ic16 {background-position:-32px -96px;}
-#goUranus .ic16 {background-position:-32px -112px;}
-#goNeptune .ic16 {background-position:-32px -128px;}
-
-
+#goSun .ic32 {
+  background-position: 0 -256px;
+}
+#goMercury .ic32 {
+  background-position: 0 0;
+}
+#goVenus .ic32 {
+  background-position: 0 -32px;
+}
+#goEarth .ic32 {
+  background-position: 0 -64px;
+}
+#goMars .ic32 {
+  background-position: 0 -96px;
+}
+#goJupiter .ic32 {
+  background-position: 0 -128px;
+}
+#goSaturn .ic32 {
+  background-position: 0 -160px;
+}
+#goUranus .ic32 {
+  background-position: 0 -192px;
+}
+#goNeptune .ic32 {
+  background-position: 0 -224px;
+}
+#goSun .ic16 {
+  background-position: -32px 0px;
+}
+#goMercury .ic16 {
+  background-position: -32px -16px;
+}
+#goVenus .ic16 {
+  background-position: -32px -32px;
+}
+#goEarth .ic16 {
+  background-position: -32px -48px;
+}
+#goMars .ic16 {
+  background-position: -32px -64px;
+}
+#goJupiter .ic16 {
+  background-position: -32px -80px;
+}
+#goSaturn .ic16 {
+  background-position: -32px -96px;
+}
+#goUranus .ic16 {
+  background-position: -32px -112px;
+}
+#goNeptune .ic16 {
+  background-position: -32px -128px;
+}
 .nav {
-	position:fixed;
-	width:100%;
-	z-index:1;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 .navList {
-	margin:0 auto;
-	width:100%;
-	
+  margin: 0 auto;
+  width: 100%;
 }
 .navList li {
-	display:block;
-	float:left;
-	height:50px;
-	box-sizing:border-box;
-	text-align:center;
-	opacity:.5;
-	background:#333;
-	background: -webkit-gradient(radial, 50% 0%, 5, 50% 0%, 300, from(#555), to(#333333));
-	border-left:1px solid #333;
-	border-right:1px solid #333;
-	position:relative;
-	overflow:hidden;
-	box-shadow:inset 0 0 4px #333;
+  display: block;
+  float: left;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: .5;
+  background: #333;
+  background: -webkit-gradient(radial, 50% 0%, 5, 50% 0%, 300, from(#555555), to(#333333));
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 4px #333;
 }
 .navList li .closePanel {
-	display:none;
-	width:15px;
-	height:15px;
-	position:absolute;
-	right:.25em;
-	top:15px;
-	color:#666;
-	transform:rotate(45deg);
-	-webkit-transform:rotate(45deg);
-	cursor:pointer;
-	font-size:1.33em;
-	text-shadow: rgba(0, 0, 0, .3)-1px -1px 1px;
-	
-	/*border-top-right-radius:35px;
+  display: none;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: .25em;
+  top: 15px;
+  color: #666;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 1.33em;
+  text-shadow: #000000 -1px 1px;
+  /*border-top-right-radius:35px;
 	border-top-left-radius:35px;*/
-	/*box-shadow:inset 0 0 5px #fff;*/
+
+  /*box-shadow:inset 0 0 5px #fff;*/
+
 }
-	.navList li .closePanel:hover {
-	color:#c00;
-	
-	/*border-top-right-radius:35px;
+.navList li .closePanel:hover {
+  color: #c00;
+  /*border-top-right-radius:35px;
 	border-top-left-radius:35px;*/
-	/*box-shadow:inset 0 0 5px #fff;*/
+
+  /*box-shadow:inset 0 0 5px #fff;*/
+
 }
 .navList .ic16 {
-	display:none;
+  display: none;
 }
 .navList li.sun,
 .navList li.me,
 .navList li.v,
 .navList li.e,
-.navList li.ma, 
-.navList li.j, 
+.navList li.ma,
+.navList li.j,
 .navList li.s,
 .navList li.u,
 .navList li.n {
-	border-bottom:8px solid #333;	
+  border-bottom: 8px solid #333;
 }
-.navList li.sun.color  {border-bottom-color: #ffd700;}
-.navList li.me.color  {border-bottom-color: #F93;}
-.navList li.v.color  {border-bottom-color: #639;}
-.navList li.e.color  {border-bottom-color: #1F43B8;}
-.navList li.ma.color  {border-bottom-color: #c00;}
-.navList li.j.color  {border-bottom-color: #FC6;}
-.navList li.s.color  {border-bottom-color: #cf6;}
-.navList li.u.color  {border-bottom-color: #6ff;}
-.navList li.n.color  {border-bottom-color: #699;}
-
+.navList li.sun.color {
+  border-bottom-color: #ffd700;
+}
+.navList li.me.color {
+  border-bottom-color: #F93;
+}
+.navList li.v.color {
+  border-bottom-color: #639;
+}
+.navList li.e.color {
+  border-bottom-color: #1F43B8;
+}
+.navList li.ma.color {
+  border-bottom-color: #c00;
+}
+.navList li.j.color {
+  border-bottom-color: #FC6;
+}
+.navList li.s.color {
+  border-bottom-color: #cf6;
+}
+.navList li.u.color {
+  border-bottom-color: #6ff;
+}
+.navList li.n.color {
+  border-bottom-color: #699;
+}
 /*.navList li.sun .closePanel {background-color: #ffd700;}
 .navList li.me  .closePanel {background-color: #F93;}
 .navList li.v  .closePanel {background-color: #639;}
@@ -568,221 +709,229 @@ position:relative;
 .navList li.s  .closePanel {background-color: #cf6;}
 .navList li.u  .closePanel {background-color: #6ff;}
 .navList li.n  .closePanel {background-color: #699;}*/
-
 .closePanel {
-	background:transparent;
+  background: transparent;
 }
-
 .navList li a {
-	position:absolute;
-	width:100%;
-	height:100%;
-	font-family:arial;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: arial;
 }
 .navList li.lastSelected {
-	opacity:1 !important; /* needs to overwrite the hover effect */
+  opacity: 1 !important;
+  /* needs to overwrite the hover effect */
+
 }
 .nav small {
-	color:#fff;
-	display:block;
-	position: fixed;
-	top:10px;
-	background:#fff;
-	opacity:.5;
+  color: #fff;
+  display: block;
+  position: fixed;
+  top: 10px;
+  background: #fff;
+  opacity: .5;
 }
 .nav .planetLink {
-	display:inline-block;
-	text-decoration:none;
-	color:#fff;
-	/*text-shadow:1px 1px #eee;*/
-	text-transform:uppercase;
-	font-size:.75em;
-	box-sizing:border-box;
-	padding:0;
-	margin:0;
-	
-}
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  /*text-shadow:1px 1px #eee;*/
 
+  text-transform: uppercase;
+  font-size: .75em;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 .fullName {
-	text-transform:uppercase;
-	display:none;
+  text-transform: uppercase;
+  display: none;
 }
 .planetLink .iau {
-	color:#ccc;
-	position:relative;
-	top:15px;
-	font-weight:bold;
-	display:inline-block;
-	position:relative;
-	text-shadow: rgba(0,0,0, .3) -1px -1px 1px;
-	
+  color: #ccc;
+  top: 15px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  text-shadow: rgba(0, 0, 0, 0.3) -1px -1px 1px;
 }
-
 /*-------------------
  
  Dwarf Nav -dfn-
  
  ----------*/
-.dwarfList, #showDwarf  {
-	display:none;
+.dwarfList,
+#showDwarf {
+  display: none;
 }
 /*-------------------
  
  Planets -p- (heavenly bodies)
  
  ----------*/
-
 #planetContainer {
-	background:transparent;
-	position:relative;
-	z-index:0;
-	 /* for non-css3 browsers */
-	/*background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000));  for webkit browsers */
-	/*background: -moz-linear-gradient(top, #111, #000);  for firefox 3.6+ */
- 	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#111111', endColorstr='#000000');  for IE */
-	padding-bottom:500px;
+  background: transparent;
+  position: relative;
+  z-index: 0;
+  /* for non-css3 browsers */
+
+  /*background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000));  for webkit browsers */
+
+  /*background: -moz-linear-gradient(top, #111, #000);  for firefox 3.6+ */
+
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#111111', endColorstr='#000000');  for IE */
+
+  padding-bottom: 500px;
 }
 .planet {
-	margin-left:auto;
-	margin-right:auto;
-	position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 .planetAnchor {
-	position:relative;
+  position: relative;
 }
 #sunAnchor.planetAnchor {
-top:1.5em !important;
+  top: 1.5em !important;
 }
-
 p {
-	line-height:1.68em;
+  line-height: 1.68em;
 }
 .bright {
-	background-color:#fff;
-	text-shadow:0 0 3px #fff;
+  background-color: #fff;
+  text-shadow: 0 0 3px #fff;
 }
 .dim {
-	background-color:#999;
-	text-shadow:0 0 3px #999;
+  background-color: #999;
+  text-shadow: 0 0 3px #999;
 }
 .star1 {
-width:1px;
-height:1px;
-background:#fff;
-position:absolute;
-left:100px;
-top:400px;
+  width: 1px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 100px;
+  top: 400px;
 }
-
 .star2 {
-width:2px;
-height:2px;
+  width: 2px;
+  height: 2px;
 }
 .star3 {
-width:3px;
-height:3px;
+  width: 3px;
+  height: 3px;
 }
 .star4 {
-width:4px;
-height:4px;
+  width: 4px;
+  height: 4px;
 }
 .moon {
-	top:50%;
+  top: 50%;
 }
 .info {
-	width:60px;
-	height:60px;
-	border-radius:0.548491379310345px;
-	position:absolute;
-	left:-29px;
-	top:-29px;
-	cursor:pointer;
-	background:#eee;
-	/*opacity:.1;*/
-	z-index:100;
-	opacity:0;
+  width: 60px;
+  height: 60px;
+  border-radius: 0.548491379310345px;
+  position: absolute;
+  left: -29px;
+  top: -29px;
+  cursor: pointer;
+  background: #eee;
+  /*opacity:.1;*/
+
+  z-index: 100;
+  opacity: 0;
 }
 /* webkit animation */
-@-webkit-keyframes orbit {  
-from {  
-    -webkit-transform: rotate(0deg);  
-}  
-to {  
-    -webkit-transform: rotate(-360deg);  
-    }  
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
 }
 /* keep the rotating containers on level 0 */
 #sun {
-	width:1000px;
-	height:1000px;
-	border-radius:500px;
-	-moz-border-radius:500px;
-	background:#ffd700;
-	/*box-shadow:0 0 21px #FF3;*/
-	margin-top:0;
-	margin:0 auto;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 500px;
+  -moz-border-radius: 500px;
+  background: #ffd700;
+  /*box-shadow:0 0 21px #FF3;*/
+
+  margin-top: 0;
+  margin: 0 auto;
 }
 #mercury {
-	/*width:3.4px;
+  /*width:3.4px;
 	height:3.4px;*/
-	width:3.505316091954023px;
-	height:3.505316091954023px;
-	border-radius:1.752658045977011px;
-	-moz-border-radius:1.7px;
-	background:#F93;
-	/*margin-top:25484px;*/
-	/*position:relative;*/
-	margin-top:41601.3649425287px;
+
+  width: 3.505316091954023px;
+  height: 3.505316091954023px;
+  border-radius: 1.752658045977011px;
+  -moz-border-radius: 1.7px;
+  background: #F93;
+  /*margin-top:25484px;*/
+
+  /*position:relative;*/
+
+  margin-top: 41601.3649425287px;
 }
-#venus { /*6,051.8 km mean radius*/
-	width:8.695114942528736px;
-	height:8.695114942528736px;
-	border-radius:4.347557471264368px;
-	-moz-border-radius:4.347557471264368px;
-	background:#639;
-	/*margin-top:22058px;*/
-	margin-top:36134.9353448276px;
-	/*box-shadow:0 0 5px #C3C; 77736.3002873563*/
+#venus {
+  /*6,051.8 km mean radius*/
+
+  width: 8.695114942528736px;
+  height: 8.695114942528736px;
+  border-radius: 4.347557471264368px;
+  -moz-border-radius: 4.347557471264368px;
+  background: #639;
+  /*margin-top:22058px;*/
+
+  margin-top: 36134.9353448276px;
+  /*box-shadow:0 0 5px #C3C; 77736.3002873563*/
+
 }
 #earth {
-	width:9.153735632183908px;
-	height:9.153735632183908px;
-	border-radius:4.576867816091954px;
-	-moz-border-radius:4.576867816091954px;
-	background:#1F43B8;
-	/*background: -webkit-gradient(radial, 50% 25%, 0, 50% 50%, 4.55, from(#6E8FFA), to(#1F43B8)) #c00;*/
-	/*margin-top:18232px;*/
-	margin-top:29733.7147988506px;
-	/*box-shadow:0 0 5px #0ff; 107470.015086207 1 AU apprx 107470px*/
-	
+  width: 9.153735632183908px;
+  height: 9.153735632183908px;
+  border-radius: 4.576867816091954px;
+  -moz-border-radius: 4.576867816091954px;
+  background: #1F43B8;
+  /*background: -webkit-gradient(radial, 50% 25%, 0, 50% 50%, 4.55, from(#6E8FFA), to(#1F43B8)) #c00;*/
+
+  /*margin-top:18232px;*/
+
+  margin-top: 29733.7147988506px;
+  /*box-shadow:0 0 5px #0ff; 107470.015086207 1 AU apprx 107470px*/
+
 }
 .ellipseTest {
-	width:582px;
-	height:520px;
-	background:#fff;
-	opacity:.5;
-	position:absolute;
-	top:-260px;
-	left: -291px;
+  width: 582px;
+  height: 520px;
+  background: #fff;
+  opacity: .5;
+  position: absolute;
+  top: -260px;
+  left: -291px;
 }
 #theMoon .infoPanel {
-	
-	display:none;
-	width:180px;
-	height:200px;
-	text-align:center;
-	background:url(images/sprite.png) no-repeat 0 20px;
+  display: none;
+  width: 180px;
+  height: 200px;
+  text-align: center;
+  background: url(images/sprite.png) no-repeat 0 20px;
 }
 #theMoon {
-		width:2.49583333333333px;
-		height:2.49583333333333px;
-		border-radius:1.24215px;
-		background:#fff;
-		position:absolute;
-		left:0px;
-		top:-260.488505747127px;
+  width: 2.49583333333333px;
+  height: 2.49583333333333px;
+  border-radius: 1.24215px;
+  background: #fff;
+  position: absolute;
+  left: 0px;
+  top: -260.488505747127px;
 }
-	/*#theMoon {
+/*#theMoon {
 		width:2.4843px;
 		height:2.4843px;
 		border-radius:1.24215px;
@@ -790,7 +939,7 @@ to {
 		position:absolute;
 		left:-260.466954022988506px; 
 	}*/
-	/*#theMoon {
+/*#theMoon {
 		width:520.933908045977px;
 		height:520.933908045977px;
 		border-radius:1.24215px;
@@ -813,35 +962,38 @@ to {
 		
 	}*/
 #mars {
-	width:4.8px;
-	height:4.8px;
-	border-radius:2.4px;
-	-moz-border-radius:2.4px;
-	background:#c00;
-	/*margin-top:34420px;*/
-	margin-top:56279.3383620689px;
-	/*box-shadow:0 0 5px #f00; 163749.353448276*/
+  width: 4.8px;
+  height: 4.8px;
+  border-radius: 2.4px;
+  -moz-border-radius: 2.4px;
+  background: #c00;
+  /*margin-top:34420px;*/
+
+  margin-top: 56279.3383620689px;
+  /*box-shadow:0 0 5px #f00; 163749.353448276*/
+
 }
 #asteroidBelt {
-	position:absolute
+  position: absolute;
 }
 #ceres {
-	width:0.35007183908046px;
-	height:0.32665229885057px;
-	background:#fff;
-	position:fixed;
-	top:200px;
-	left:200px;
+  width: 0.35007183908046px;
+  height: 0.32665229885057px;
+  background: #fff;
+  position: fixed;
+  top: 200px;
+  left: 200px;
 }
 #jupiter {
-	width:102.7px;
-	height:96.05px;
-	border-radius:51.35px;
-	-moz-border-radius:51.35px;
-	background:#FC6;
-	/*margin-top:241999px;
+  width: 102.7px;
+  height: 96.05px;
+  border-radius: 51.35px;
+  -moz-border-radius: 51.35px;
+  background: #FC6;
+  /*margin-top:241999px;
 	background: -webkit-gradient(radial, 50% 0%, 0, 50% 50%, 51.35, from(blue), to(#eef)) #c00; 559301.149425287*/
-	margin-top:395551.795977011px;
+
+  margin-top: 395551.795977011px;
 }
 /*	#io {
 		width:708.590804597701px;
@@ -856,217 +1008,215 @@ to {
 		-webkit-animation-duration: 17.7s;
 		z-index:0;
 	}*/
-		#io  {
-			width:2.617097701149425px;
-			height:2.617097701149425px;
-			border-radius:1.308548850574713px;
-			position:absolute;
-			left:0px;
-			top:-301.724137931034px;
-			background:#FC6;
-		}
-	#europa {
-		width:1066.82931034483px;
-		height:1066.82931034483px;
-		position:absolute;
-		left:-482.064655172413793px;
-		top:-482.064655172413793px;
-		/*background:#FC6;
+#io {
+  width: 2.617097701149425px;
+  height: 2.617097701149425px;
+  border-radius: 1.308548850574713px;
+  position: absolute;
+  left: 0px;
+  top: -301.724137931034px;
+  background: #FC6;
+}
+#europa {
+  width: 1066.82931034483px;
+  height: 1066.82931034483px;
+  position: absolute;
+  left: -482.0646551724138px;
+  top: -482.0646551724138px;
+  /*background:#FC6;
 		opacity:.5;*/
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 35.4s;
-		z-index:0;
-	}
-		#europa .moon {
-			width:2.242816091954023px;
-			height:2.242816091954023px;
-			border-radius:1.121408045977011px;
-			position:absolute;
-			left:0;
-			background:#FC6;
-		}
-	#ganymede {
-		width:1640.64827586207px;
-		height:1640.64827586207px;
-		position:absolute;
-		left:-768.974137931034483px;
-		top:-768.974137931034483px;
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 70.8s;
-		z-index:0;
-		/*background:#FC6;
+
+  -webkit-animation-name: orbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 35.4s;
+  z-index: 0;
+}
+#europa .moon {
+  width: 2.242816091954023px;
+  height: 2.242816091954023px;
+  border-radius: 1.121408045977011px;
+  position: absolute;
+  left: 0;
+  background: #FC6;
+}
+#ganymede {
+  width: 1640.64827586207px;
+  height: 1640.64827586207px;
+  position: absolute;
+  left: -768.9741379310345px;
+  top: -768.9741379310345px;
+  -webkit-animation-name: orbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 70.8s;
+  z-index: 0;
+  /*background:#FC6;
 		opacity:.5;*/
-	}
-		#ganymede .moon {
-			width:3.780172413793103px;
-			height:3.780172413793103px;
-			border-radius:1.890086206896552px;
-			position:absolute;
-			left:0px;
-			background:#FC6;
-			
-		}
-	#callisto {
-		width:3.463362068965517px;
-		height:3.463362068965517px;
-		border-radius:1.731681034482759px;
-		position:absolute;
-		left:-1352.520833333333333px;
-		background:#FC6;
-	}
+
+}
+#ganymede .moon {
+  width: 3.780172413793103px;
+  height: 3.780172413793103px;
+  border-radius: 1.890086206896552px;
+  position: absolute;
+  left: 0px;
+  background: #FC6;
+}
+#callisto {
+  width: 3.463362068965517px;
+  height: 3.463362068965517px;
+  border-radius: 1.731681034482759px;
+  position: absolute;
+  left: -1352.5208333333333px;
+  background: #FC6;
+}
 #saturn {
-	width:83.6px;
-	height:83.6px;
-	border-radius:41.8px;
-	-moz-border-radius:41.8px;
-	background:#CF6;
-	/*margin-top:285342px; 1029776.84626437*/
-	margin-top:470475.696839081px;
+  width: 83.6px;
+  height: 83.6px;
+  border-radius: 41.8px;
+  -moz-border-radius: 41.8px;
+  background: #CF6;
+  /*margin-top:285342px; 1029776.84626437*/
+
+  margin-top: 470475.696839081px;
 }
-	#titan {
-		width:3.699712643678161px;
-		height:3.699712643678161px;
-		border-radius:1.84985632183908px;
-		position:absolute;
-		left:-877.780172413793103px;
-		background:#FC6;
-	}
-	#titan {
-		width:3.699712643678161px;
-		height:3.699712643678161px;
-		border-radius:1.84985632183908px;
-		position:absolute;
-		left:-877.780172413793103px;
-		background:#FC6;
-	}
-	#rhea {
-		width:757.33908045977px;
-		height:757.33908045977px;
-		border-radius:0.548491379310345px;
-		position:absolute;
-		left:-336.869540229885px;
-		top:-336.869540229885px;
-		/*background:#FC6;
+#titan {
+  width: 3.699712643678161px;
+  height: 3.699712643678161px;
+  border-radius: 1.84985632183908px;
+  position: absolute;
+  left: -877.7801724137931px;
+  background: #FC6;
+}
+#titan {
+  width: 3.699712643678161px;
+  height: 3.699712643678161px;
+  border-radius: 1.84985632183908px;
+  position: absolute;
+  left: -877.7801724137931px;
+  background: #FC6;
+}
+#rhea {
+  width: 757.33908045977px;
+  height: 757.33908045977px;
+  border-radius: 0.548491379310345px;
+  position: absolute;
+  left: -336.869540229885px;
+  top: -336.869540229885px;
+  /*background:#FC6;
 		opacity:.5;*/
-		-webkit-animation-name: orbit;  
-		-webkit-animation-iteration-count: infinite;  
-		-webkit-animation-timing-function: linear;  
-		-webkit-animation-duration: 70.8s;
-	}
-		#rhea .moon {
-			width:1.09698275862069px;
-			height:1.09698275862069px;
-			border-radius:0.548491379310345px;
-			position:absolute;
-			left:0;
-			background:#FC6;
-			
-		}
-		
-	
-	/* saturn's rings */
-	#saturnCopy {
-		width:92.6px;
-		height:92.6px;
-		border-radius:46.3px;
-		-moz-border-radius:46.3px;
-		background:#CF6;
-		position:absolute;
-		border:9px solid #000;
-		box-sizing: border-box;
-		left:-4.5px;
-		top:-4.5px;
 
-	}
-	.sRing {
-		opacity:.2;
-		position:absolute;
-	}
-	#sRingD {
-		width:107px;
-		height:107px;
-		border-radius:53.5px;
-		background:#000;
-		left:-12px;
-		top:-12px;
-	}
-	#sRingC {
-		width:132px;
-		height:132px;
-		border-radius:66px;
-		background: #eee;
-		left:-24px;
-		top:-24px;	
-	}
-	#sRingB {
-		width:169px;
-		height:169px;
-		border-radius:84.5px;
-		background: #996633;
-		left:-42.5px;
-		top:-42.5px;
-		border:1px solid #000;
-	}
-	#sRingA {
-		width:197px;
-		height:197px;
-		border-radius:98.5px;
-		background: #f7f7f7;
-		left:-56.7px;
-		top:-56.7px;
-	}
+  -webkit-animation-name: orbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 70.8s;
+}
+#rhea .moon {
+  width: 1.09698275862069px;
+  height: 1.09698275862069px;
+  border-radius: 0.548491379310345px;
+  position: absolute;
+  left: 0;
+  background: #FC6;
+}
+/* saturn's rings */
+#saturnCopy {
+  width: 92.6px;
+  height: 92.6px;
+  border-radius: 46.3px;
+  -moz-border-radius: 46.3px;
+  background: #CF6;
+  position: absolute;
+  border: 9px solid #000;
+  box-sizing: border-box;
+  left: -4.5px;
+  top: -4.5px;
+}
+.sRing {
+  opacity: .2;
+  position: absolute;
+}
+#sRingD {
+  width: 107px;
+  height: 107px;
+  border-radius: 53.5px;
+  background: #000;
+  left: -12px;
+  top: -12px;
+}
+#sRingC {
+  width: 132px;
+  height: 132px;
+  border-radius: 66px;
+  background: #eee;
+  left: -24px;
+  top: -24px;
+}
+#sRingB {
+  width: 169px;
+  height: 169px;
+  border-radius: 84.5px;
+  background: #996633;
+  left: -42.5px;
+  top: -42.5px;
+  border: 1px solid #000;
+}
+#sRingA {
+  width: 197px;
+  height: 197px;
+  border-radius: 98.5px;
+  background: #f7f7f7;
+  left: -56.7px;
+  top: -56.7px;
+}
 #uranus {
-	width:32.6px;
-	height:32.6px;
-	border-radius:16.35px;
-	-moz-border-radius:16.3px;
-	background:#6FF;
-	margin-top:1036063.17180584px;
-	/* semi-major axis 2065840.018070218*/
-}
+  width: 32.6px;
+  height: 32.6px;
+  border-radius: 16.35px;
+  -moz-border-radius: 16.3px;
+  background: #6FF;
+  margin-top: 1036063.17180584px;
+  /* semi-major axis 2065840.018070218*/
 
+}
 #neptune {
-	width:33.7px;
-	height:33.7px;
-	border-radius:16.85px;
-	-moz-border-radius:16.85px;
-	background:#699;
-	/*semi-major axis 3235232.51508621*/
-	margin-top:1169392.49701599px;
+  width: 33.7px;
+  height: 33.7px;
+  border-radius: 16.85px;
+  -moz-border-radius: 16.85px;
+  background: #699;
+  /*semi-major axis 3235232.51508621*/
+
+  margin-top: 1169392.49701599px;
 }
-	#triton {
-	   width:254.855603448276px; /* from the center of Neptune */
-	   height:254.855603448276px;
-	   
-	}
-	   #triton .moon {
-		   width:1.94454022988506px;
-		   height:1.94454022988506px;
-		   
-		   
-	   }
+#triton {
+  width: 254.855603448276px;
+  /* from the center of Neptune */
+
+  height: 254.855603448276px;
+}
+#triton .moon {
+  width: 1.94454022988506px;
+  height: 1.94454022988506px;
+}
 #pluto {
-	width:1px;
-	height:1px;
-	background:#ccc;
-	margin-top:984595.07112069px;
-	/*4219827.5862069*/
-	display:none;
-	/*move this to dwarf*/
+  width: 1px;
+  height: 1px;
+  background: #ccc;
+  margin-top: 984595.07112069px;
+  /*4219827.5862069*/
+
+  display: none;
+  /*move this to dwarf*/
+
 }
-
-
 .typekit-badge {
-	position:fixed;
-	left:0 !important;
-	bottom:0;
-	opacity:.1;
+  position: fixed;
+  left: 0 !important;
+  bottom: 0;
+  opacity: .1;
 }
-
 /* ---------------------
   
   test area
